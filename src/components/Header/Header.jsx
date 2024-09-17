@@ -11,7 +11,7 @@ const Header = () => {
         <nav>
           <div className="logo">
             <img src={logo} alt="logo" className="homePage-logo" />
-            <p className="title">Fitness First</p>
+            <p className="title">Calisthencis</p>
           </div>
           <ul className="nav-lists">
             {links.map((link, index) => (

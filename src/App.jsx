@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const App = () => {
   return (
     <Router>
+      <Header />
       <Routes>
-        <Route path="/" element={<Header />}>
-          <Route path="/home" element={<HomePage />} />
-        </Route>
+        <Route path="/" element={<HomePage />} index />
+        <Route path="/home" element={<HomePage />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

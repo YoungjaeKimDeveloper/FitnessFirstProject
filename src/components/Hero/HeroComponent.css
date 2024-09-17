@@ -1,0 +1,35 @@
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.main-hero-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.hero-section > button {
+  position: absolute;
+  border: none;
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  border: 1px solid black;
+  letter-spacing: 0.2rem;
+  background-color: black;
+  padding: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+  width: 40rem;
+}
+.hero-section > button:hover {
+  color: black;
+  background-color: white;
+  border: white 1px solid;
+}

@@ -22,7 +22,7 @@ a:visited {
 }
 a:hover {
   color: inherit;
-  color: antiquewhite;
+  /* color: antiquewhite; */
 }
 a:active {
   color: inherit;

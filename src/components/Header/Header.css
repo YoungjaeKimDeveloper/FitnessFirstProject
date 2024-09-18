@@ -39,6 +39,9 @@
   gap: 2rem;
   font-size: 2rem;
 }
+.nav-list:first-child {
+  margin-left: 2rem;
+}
 .nav-list {
   font-weight: bold;
   text-transform: uppercase;

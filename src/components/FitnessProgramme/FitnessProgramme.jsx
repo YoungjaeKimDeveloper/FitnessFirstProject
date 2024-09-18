@@ -1,7 +1,13 @@
 import React from "react";
 import "./FitnessProgramme.css";
 
-const FitnessProgramme = ({ title, img, description, isOpposite }) => {
+const FitnessProgramme = ({
+  title,
+  img,
+  description,
+  isOpposite,
+  toggleModal,
+}) => {
   return (
     <div className="programme">
       {isOpposite ? (
@@ -9,7 +15,9 @@ const FitnessProgramme = ({ title, img, description, isOpposite }) => {
           <div className="programme-description">
             <h1>{title}</h1>
             <p>{description}</p>
-            <button className="finding-trainer">Find Trainer</button>
+            <button className="finding-trainer" onClick={toggleModal}>
+              Find Trainer
+            </button>
           </div>
           <img src={img} alt="" className="programme-pic" />
         </>
@@ -19,7 +27,9 @@ const FitnessProgramme = ({ title, img, description, isOpposite }) => {
           <div className="programme-description">
             <h1>{title}</h1>
             <p>{description}</p>
-            <button className="finding-trainer">Find Trainer</button>
+            <button className="finding-trainer" onClick={toggleModal}>
+              Find Trainer
+            </button>
           </div>
         </>
       )}

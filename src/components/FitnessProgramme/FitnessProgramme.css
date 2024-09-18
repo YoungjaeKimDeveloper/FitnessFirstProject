@@ -1,0 +1,30 @@
+/* Programme CSS */
+.programme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* column-gap: 10rem; */
+  /* row-gap: 2rem; */
+  /* padding: 10rem; */
+}
+.programme-pic {
+  width: 100%;
+}
+.programme-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: dimgrey;
+  text-align: center;
+  flex-direction: column;
+}
+.programme-description > h1 {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.programme-description > p {
+  text-align: left;
+  margin-left: 2rem;
+}

@@ -3,16 +3,18 @@ import { IoMdArrowBack } from "react-icons/io";
 import "./Modal.css";
 import coachLists from "/Users/youngjaekim/Desktop/webDeveloper/ING/fitnessProject/fitnessFirst/json/coachLists.json";
 import TrainerCard from "../TrainerCard/TrainerCard";
-const Modal = ({ toggleModal }) => {
+const Modal = ({ toggleModal, selectedSport }) => {
   const handleModal = (e) => {
     e.preventDefault();
     toggleModal();
   };
-
+  const filteredCoachList = coachLists.filter(
+    (coach) => coach.major == selectedSport
+  );
   return (
     <div className="modal-layout">
       <div className="trainer-layout">
-        {coachLists.map((coachlist, index) => (
+        {filteredCoachList.map((coachlist, index) => (
           <TrainerCard
             key={index}
             name={coachlist.name}

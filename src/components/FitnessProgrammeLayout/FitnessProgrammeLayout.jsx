@@ -2,7 +2,7 @@ import React from "react";
 import "./FitnessProgrammeLayout.css";
 import FitnessProgramme from "../FitnessProgramme/FitnessProgramme";
 import courses from "../../../json/courses.json";
-const FitnessProgrammeLayout = ({ toggleModal }) => {
+const FitnessProgrammeLayout = ({ toggleModal, setSelectedSport }) => {
   return (
     <div className="fitness-Programme-Layout">
       <h1 className="fitness-Programme-Layout-title">Our Programme</h1>
@@ -14,6 +14,8 @@ const FitnessProgrammeLayout = ({ toggleModal }) => {
           description={course.description}
           isOpposite={course.isOpposite}
           toggleModal={toggleModal}
+          major={course.major}
+          setSelectedSport={setSelectedSport}
         />
       ))}
     </div>

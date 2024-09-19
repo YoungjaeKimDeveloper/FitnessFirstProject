@@ -4,20 +4,62 @@
     "name": "Mike",
     "description": "A seasoned trainer with over 15 years of experience, specializing in professional boxing techniques.",
     "carrer": 15,
-    "img": "../public/boxingCoachlists/boxingCoach.webp"
+    "img": "../public/assets/boxingCoachLists/boxingCoach.webp"
   },
   {
     "major": "boxing",
     "name": "James",
     "description": "An ex-national champion, Sarah brings her expertise in agility and speed to every training session.",
     "carrer": 8,
-    "img": "../public/boxingCoachlists/boxingCoach2.webp"
+    "img": "../public/assets/boxingCoachLists/boxingCoach2.webp"
   },
   {
     "major": "boxing",
     "name": "Maria",
     "description": " Known for his rigorous fitness programs, David focuses on strength, endurance, and discipline in boxing.",
     "carrer": 10,
-    "img": "../public/boxingCoachlists/boxingCoach3.png"
+    "img": "../public/assets/boxingCoachLists/boxingCoach3.png"
+  },
+  {
+    "major": "kick-boxing",
+    "name": "Tom",
+    "description": "An experienced kickboxer with a focus on technique and speed, helping students achieve their best.",
+    "carrer": 12,
+    "img": "../public/kickBoxingCoachLists/kickBoxer.png"
+  },
+  {
+    "major": "kick-boxing",
+    "name": "Sophie",
+    "description": "A dynamic trainer known for her high-energy classes and effective kickboxing techniques.",
+    "carrer": 5,
+    "img": "../public/kickBoxingCoachLists/kickBoxer2.jpg"
+  },
+  {
+    "major": "kick-boxing",
+    "name": "Alex",
+    "description": "Specializes in both kickboxing and self-defense, providing a comprehensive training experience.",
+    "carrer": 7,
+    "img": "../public/kickBoxingCoachLists/kickBoxer3.jpg"
+  },
+  {
+    "major": "weightlifting",
+    "name": "John",
+    "description": "A competitive weightlifter with years of coaching experience, focusing on strength and form.",
+    "carrer": 15,
+    "img": "../public/assets/heavylifting/heavyLifting1.jpg"
+  },
+  {
+    "major": "weightlifting",
+    "name": "Emily",
+    "description": "An accomplished trainer with expertise in powerlifting and Olympic weightlifting techniques.",
+    "carrer": 10,
+    "img": "../public/assets/heavylifting/heavyLifting2.jpg"
+  },
+  {
+    "major": "weightlifting",
+    "name": "David",
+    "description": "Offers personalized coaching tailored to individual goals, from beginners to advanced lifters.",
+    "carrer": 8,
+    "img": "../public/assets/heavylifting/heavyLifting3.jpg"
   }
 ]

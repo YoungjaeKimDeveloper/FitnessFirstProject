@@ -7,7 +7,12 @@ const FitnessProgramme = ({
   description,
   isOpposite,
   toggleModal,
+  major,
+  setSelectedSport,
 }) => {
+  const addToogle = (sport) => {
+    toggleModal(), setSelectedSport(sport);
+  };
   return (
     <div className="programme">
       {isOpposite ? (
@@ -15,7 +20,10 @@ const FitnessProgramme = ({
           <div className="programme-description">
             <h1>{title}</h1>
             <p>{description}</p>
-            <button className="finding-trainer" onClick={toggleModal}>
+            <button
+              className="finding-trainer"
+              onClick={() => addToogle(major)}
+            >
               Find Trainer
             </button>
           </div>
@@ -27,7 +35,10 @@ const FitnessProgramme = ({
           <div className="programme-description">
             <h1>{title}</h1>
             <p>{description}</p>
-            <button className="finding-trainer" onClick={toggleModal}>
+            <button
+              className="finding-trainer"
+              onClick={() => addToogle(major)}
+            >
               Find Trainer
             </button>
           </div>

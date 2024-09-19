@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Header from "../components/Header/Header";
 import HeroComponent from "../components/Hero/HeroComponent";
 import FitnessProgramme from "../components/FitnessProgrammeLayout/FitnessProgrammeLayout";
 import Footer from "../components/Footer/Footer";

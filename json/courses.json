@@ -3,18 +3,21 @@
     "title": "boxing",
     "img": "../public/assets/boxing.jpg",
     "description": "Boxing is a dynamic combat sport that combines strength, strategy, and endurance. It involves two athletes competing in a ring, using punches to score points or achieve knockouts while following strict rules for safety and fairness.",
-    "isOpposite": false
+    "isOpposite": false,
+    "major": "boxing"
   },
   {
     "title": "kick boxing",
     "img": "../public/assets/kickBoxing.jpg",
     "description": "Kickboxing is a high-intensity combat sport that blends elements of traditional boxing with powerful kicks. It emphasizes agility, strength, and precision, with fighters using both their hands and legs to strike opponents in a controlled, rule-based environment.",
-    "isOpposite": "true"
+    "isOpposite": true,
+    "major": "kick-boxing"
   },
   {
     "title": "weightlifting",
     "img": "../public/assets/fitness.jpg",
     "description": "Weightlifting is a strength sport in which athletes lift heavy barbells in two main events: the snatch and the clean and jerk. It requires power, technique, and balance, with the goal of lifting the maximum weight in each event.",
-    "isOpposite": false
+    "isOpposite": false,
+    "major": "weightlifting"
   }
 ]

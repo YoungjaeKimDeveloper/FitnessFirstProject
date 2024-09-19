@@ -1,7 +1,6 @@
 import React from "react";
 import { IoMdArrowBack } from "react-icons/io";
 import "./Modal.css";
-import boxCoach from "../../../public/boxingCoachlists/boxingCoach.webp";
 import coachLists from "/Users/youngjaekim/Desktop/webDeveloper/ING/fitnessProject/fitnessFirst/json/coachLists.json";
 import TrainerCard from "../TrainerCard/TrainerCard";
 const Modal = ({ toggleModal }) => {

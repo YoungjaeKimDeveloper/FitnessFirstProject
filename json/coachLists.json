@@ -1,0 +1,23 @@
+[
+  {
+    "major": "boxing",
+    "name": "Mike",
+    "description": "A seasoned trainer with over 15 years of experience, specializing in professional boxing techniques.",
+    "carrer": 15,
+    "img": "../public/boxingCoachlists/boxingCoach.webp"
+  },
+  {
+    "major": "boxing",
+    "name": "James",
+    "description": "An ex-national champion, Sarah brings her expertise in agility and speed to every training session.",
+    "carrer": 8,
+    "img": "../public/boxingCoachlists/boxingCoach2.webp"
+  },
+  {
+    "major": "boxing",
+    "name": "Maria",
+    "description": " Known for his rigorous fitness programs, David focuses on strength, endurance, and discipline in boxing.",
+    "carrer": 10,
+    "img": "../public/boxingCoachlists/boxingCoach3.png"
+  }
+]

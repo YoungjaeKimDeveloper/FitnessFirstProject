@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Grilled Chicken Breast",
+    "description": "A simple dish seasoned with salt and pepper, grilled to perfection.",
+    "protein": 31
+  },
+  {
+    "name": "Scrambled Eggs",
+    "description": "Soft scrambled eggs with a touch of milk for creaminess.",
+    "protein": 20
+  },
+  {
+    "name": "Grilled Salmon",
+    "description": "Salmon grilled with olive oil and lemon juice for flavor.",
+    "protein": 25
+  },
+  {
+    "name": "Tofu Steak",
+    "description": "Grilled tofu marinated with spices, a great vegetarian option.",
+    "protein": 18
+  },
+  {
+    "name": "Beef Stir-fry",
+    "description": "Stir-fried marinated beef with assorted vegetables.",
+    "protein": 26
+  },
+  {
+    "name": "Tuna Salad",
+    "description": "A fresh salad combining tuna with various vegetables.",
+    "protein": 30
+  },
+  {
+    "name": "Quinoa Bowl",
+    "description": "A nutritious bowl with quinoa and assorted veggies and protein.",
+    "protein": 14
+  },
+  {
+    "name": "Turkey Meatballs",
+    "description": "Delicious meatballs made from ground turkey.",
+    "protein": 24
+  },
+  {
+    "name": "Greek Yogurt",
+    "description": "High-protein Greek yogurt topped with fresh fruits.",
+    "protein": 10
+  },
+  {
+    "name": "Black Bean Tacos",
+    "description": "Tacos filled with black beans and fresh vegetables.",
+    "protein": 15
+  },
+  {
+    "name": "Egg Frittata",
+    "description": "A fluffy omelet with vegetables and cheese.",
+    "protein": 22
+  },
+  {
+    "name": "Sausage Stir-fry",
+    "description": "Sautéed sausage with assorted vegetables.",
+    "protein": 20
+  },
+  {
+    "name": "Almond Butter",
+    "description": "Creamy butter made from ground almonds, great for spreading.",
+    "protein": 7
+  },
+  {
+    "name": "Grilled Mackerel",
+    "description": "Mackerel seasoned with salt and grilled to perfection.",
+    "protein": 22
+  },
+  {
+    "name": "Sautéed Mushrooms",
+    "description": "Sautéed button mushrooms, a perfect side dish.",
+    "protein": 3
+  },
+  {
+    "name": "Cottage Cheese Salad",
+    "description": "A fresh salad made with cottage cheese and vegetables.",
+    "protein": 25
+  },
+  {
+    "name": "Vegetable Smoothie",
+    "description": "A smoothie blended with vegetables and protein powder.",
+    "protein": 20
+  },
+  {
+    "name": "Chickpea Curry",
+    "description": "A flavorful Indian curry made with chickpeas and spices.",
+    "protein": 15
+  },
+  {
+    "name": "Protein Bar",
+    "description": "A high-protein snack made with various nuts and protein powder.",
+    "protein": 12
+  },
+  {
+    "name": "Milk Smoothie",
+    "description": "A simple smoothie made with milk and fruits.",
+    "protein": 8
+  }
+]

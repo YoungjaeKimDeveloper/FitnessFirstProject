@@ -1,0 +1,60 @@
+.dietMarket {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+.food-cards {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-left: 15%;
+  padding: 20px;
+  background-color: rgb(7, 7, 7);
+}
+.food-card {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin-left: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(238, 235, 235, 0.16) 0px 3px 6px,
+    rgba(239, 224, 224, 0.23) 0px 3px 6px;
+  background-color: black;
+  opacity: 1;
+  cursor: pointer;
+}
+.food-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.food-card-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  opacity: 0;
+  color: wheat;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+.food-card:hover {
+  /* opacity: 0.5; */
+}
+.food-card:hover:hover .food-card-contents {
+  opacity: 1;
+}

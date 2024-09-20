@@ -4,7 +4,7 @@ import "./Header.css";
 import { Link, Outlet } from "react-router-dom";
 const Header = () => {
   //Header Links
-  const links = ["Home", "History", "Plan", "Diet", "Achievement"];
+  const links = ["Home", "History", "Plan", "Market", "Achievement"];
   return (
     <div>
       <div className="header">

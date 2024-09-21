@@ -1,5 +1,6 @@
 import React from "react";
 import "./FoodCard.css";
+import { FaCartPlus } from "react-icons/fa";
 const FoodCard = ({ title, description, img, protein }) => {
   return (
     <div className="food-cards">
@@ -9,6 +10,7 @@ const FoodCard = ({ title, description, img, protein }) => {
           <p className="food-title">{title}</p>
           <p className="food-description">{description}</p>
           <p>{protein}</p>
+          <FaCartPlus className="food-card-cartIcon" />
         </div>
       </div>
     </div>

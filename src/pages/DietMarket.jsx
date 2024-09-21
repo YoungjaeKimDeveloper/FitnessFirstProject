@@ -16,6 +16,7 @@ const DietMarket = () => {
               img={food.img}
               key={index}
               protein={food.protein}
+              price={food.price}
             />
           ))}
         </div>

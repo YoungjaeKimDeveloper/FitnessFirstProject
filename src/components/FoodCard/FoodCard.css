@@ -58,3 +58,9 @@
   color: yellow;
   transition: all 0.3s ease-in;
 }
+.price-cart {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  border-bottom: 1px solid wheat;
+}

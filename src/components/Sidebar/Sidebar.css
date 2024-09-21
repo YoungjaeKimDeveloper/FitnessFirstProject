@@ -1,12 +1,12 @@
 .sidebar {
   height: 100vh;
   background-color: black;
-  width: 15%;
+  width: 60%;
   color: white;
   position: relative;
   transition: all 0.5s ease-in-out;
   text-rendering: auto;
-  position: fixed;
+  position: sticky;
   text-align: center;
   border-right: 1px solid white;
 }

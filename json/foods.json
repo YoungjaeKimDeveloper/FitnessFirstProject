@@ -1,0 +1,135 @@
+[
+  {
+    "foodTitle": "Beef Set",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/beefSet.webp",
+    "description": "A hearty set of grilled beef slices, perfect for protein lovers.",
+    "protein": "26g"
+  },
+  {
+    "foodTitle": "Bibimbap",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/bibimbap.jpg",
+    "description": "Traditional Korean mixed rice with vegetables and beef.",
+    "protein": "18g"
+  },
+  {
+    "foodTitle": "Cacao",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/caocao.jpg",
+    "description": "Rich dark chocolate cacao, great for a quick energy boost.",
+    "protein": "2g"
+  },
+  {
+    "foodTitle": "Chicken Breast",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/chickenBreast.webp",
+    "description": "Lean and tender chicken breast, a staple for fitness diets.",
+    "protein": "31g"
+  },
+  {
+    "foodTitle": "Chicken Breast Set",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/chickenbreastSet.webp",
+    "description": "Complete meal set featuring roasted chicken breast with sides.",
+    "protein": "35g"
+  },
+  {
+    "foodTitle": "Diet Yogurt",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/dietYoguart.webp",
+    "description": "Low-fat yogurt with live cultures to support gut health.",
+    "protein": "10g"
+  },
+  {
+    "foodTitle": "Dry Beef",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/dryBeef.jpg",
+    "description": "Jerky-style dried beef, a savory, protein-packed snack.",
+    "protein": "22g"
+  },
+  {
+    "foodTitle": "Eel",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/eel.jpg",
+    "description": "Grilled eel, rich in omega-3 fatty acids and protein.",
+    "protein": "25g"
+  },
+  {
+    "foodTitle": "Eggs and Fruit",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/eggsAndFruti.jpg",
+    "description": "A healthy combination of boiled eggs and fresh fruit.",
+    "protein": "12g"
+  },
+  {
+    "foodTitle": "Fried Egg",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/friedEgg.jpg",
+    "description": "Perfectly fried eggs, ideal for a protein-rich breakfast.",
+    "protein": "6g"
+  },
+  {
+    "foodTitle": "Pizza",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/pizza-4407510_1280.jpg",
+    "description": "Protein-loaded pizza with a variety of meat toppings.",
+    "protein": "20g"
+  },
+  {
+    "foodTitle": "Pork and Plain Rice",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/porkAndPlainRice.jpg",
+    "description": "Simple yet fulfilling dish of pork slices over steamed rice.",
+    "protein": "24g"
+  },
+  {
+    "foodTitle": "Protein Burger",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/proteinBurger.jpg",
+    "description": "High-protein burger with a thick beef patty and fresh veggies.",
+    "protein": "30g"
+  },
+  {
+    "foodTitle": "Protein Sausage",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/proteinSausage.jpg",
+    "description": "Spicy and lean protein sausages made from high-quality meat.",
+    "protein": "21g"
+  },
+  {
+    "foodTitle": "Protein Spaghetti",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/proteinSpaghetti.jpg",
+    "description": "Whole wheat spaghetti tossed with a protein-rich meat sauce.",
+    "protein": "27g"
+  },
+  {
+    "foodTitle": "Salmon",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/salmon.jpg",
+    "description": "Freshly grilled salmon fillet, high in protein and omega-3.",
+    "protein": "23g"
+  },
+  {
+    "foodTitle": "Seafood Set",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/seafoodSet.webp",
+    "description": "Assorted seafood platter, a feast of oceanic delights.",
+    "protein": "29g"
+  },
+  {
+    "foodTitle": "Small Steak",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/smallSteak.jpg",
+    "description": "Juicy small cut steak, rich in flavor and protein.",
+    "protein": "28g"
+  },
+  {
+    "foodTitle": "Vet Meal",
+    "category": "Protein",
+    "img": "../public/assets/foodsImage/vetMeal.webp",
+    "description": "Specially formulated meal for veterinary health, balanced in nutrients.",
+    "protein": "15g"
+  }
+]

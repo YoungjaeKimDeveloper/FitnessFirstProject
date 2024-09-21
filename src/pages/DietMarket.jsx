@@ -1,26 +1,23 @@
 import React from "react";
 import Sidbar from "../components/Sidebar/Sidbar";
-import salmon from "../../public/assets/foods/salmon.jpg";
-import meat from "../../public/assets/foods/meat.jpg";
+import foods from "../../json/foods.json";
 import "./DietMarket.css";
+import FoodCard from "../components/FoodCard/FoodCard";
 const DietMarket = () => {
   return (
     <div className="dietMarket">
       <Sidbar className="dietMarket-sideBar" />
-      <div className="food-cards">
-        <div className="food-card">
-          <img src={salmon} alt="salmon-img" className="food-card-img" />
-          <div className="food-card-contents">
-            <p>Salmon</p>
-            <p>Description</p>
-          </div>
-        </div>
-        <div className="food-card">
-          <img src={meat} alt="salmon-img" className="food-card-img" />
-          <div className="food-card-contents">
-            <p>Meat</p>
-            <p>Description</p>
-          </div>
+      <div className="food-cards-container">
+        <div className="food-cards">
+          {foods.map((food, index) => (
+            <FoodCard
+              title={food.foodTitle}
+              description={food.description}
+              img={food.img}
+              key={index}
+              protein={food.protein}
+            />
+          ))}
         </div>
       </div>
     </div>

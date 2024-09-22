@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import { IoMenu } from "react-icons/io5";
 const Sidbar = () => {
-  const sidebarLists = ["protein", "snack", "supplements", "Gym Gear"];
+  const sidebarLists = ["protein", "snack"];
   const [isMenuOpened, setIsMenuOpened] = useState(true);
   const handleMenu = () => {
     setIsMenuOpened((prev) => !prev);

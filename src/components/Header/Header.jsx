@@ -5,6 +5,26 @@ import { Link, Outlet } from "react-router-dom";
 const Header = () => {
   //Header Links
   const links = ["Home", "History", "Plan", "Market", "Achievement"];
+
+  const links2 = [
+    {
+      slug: "",
+      name: "Home",
+    },
+    {
+      slug: "history",
+      name: "History",
+    },
+  ];
+
+  // return (
+  //   <div>
+  //     {links2.map((link) => {
+  //       <Link to={link.slug}>{link.name}</Link>;
+  //     })}
+  //   </div>
+  // );
+
   return (
     <div>
       <div className="header">

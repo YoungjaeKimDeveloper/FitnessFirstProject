@@ -4,12 +4,15 @@ import foods from "../../json/foods.json";
 import "./DietMarket.css";
 import FoodCard from "../components/FoodCard/FoodCard";
 const DietMarket = () => {
+  const filteredFoodList = foods.filter(
+    (food, index) => food.category === "Protein"
+  );
   return (
     <div className="dietMarket">
       <Sidbar className="dietMarket-sideBar" />
       <div className="food-cards-container">
         <div className="food-cards">
-          {foods.map((food, index) => (
+          {filteredFoodList.map((food, index) => (
             <FoodCard
               title={food.foodTitle}
               description={food.description}

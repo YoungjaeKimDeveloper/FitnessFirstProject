@@ -4,6 +4,7 @@ import Error from "./components/Error/Error";
 import HomePage from "./pages/HomePage";
 import DietMarket from "./pages/DietMarket";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 const App = () => {
   return (
     <Router>

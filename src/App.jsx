@@ -4,6 +4,7 @@ import Error from "./components/Error/Error";
 import HomePage from "./pages/HomePage";
 import DietMarket from "./pages/DietMarket";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CartPage from "./pages/CartPage";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("protein");
@@ -23,6 +24,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>

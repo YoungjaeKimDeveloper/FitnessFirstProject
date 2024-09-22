@@ -3,13 +3,18 @@ import Sidbar from "../components/Sidebar/Sidbar";
 import foods from "../../json/foods.json";
 import "./DietMarket.css";
 import FoodCard from "../components/FoodCard/FoodCard";
-const DietMarket = () => {
+
+const DietMarket = ({ setSelectedCategory, selectedCategory }) => {
   const filteredFoodList = foods.filter(
-    (food, index) => food.category === "Protein"
+    (food, index) => food.category === selectedCategory
   );
   return (
     <div className="dietMarket">
-      <Sidbar className="dietMarket-sideBar" />
+      <Sidbar
+        className="dietMarket-sideBar"
+        setSelectedCategory={setSelectedCategory}
+        selectedCategory={selectedCategory}
+      />
       <div className="food-cards-container">
         <div className="food-cards">
           {filteredFoodList.map((food, index) => (

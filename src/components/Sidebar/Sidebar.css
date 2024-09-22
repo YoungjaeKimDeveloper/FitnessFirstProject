@@ -1,7 +1,7 @@
 .sidebar {
   height: 100vh;
   background-color: black;
-  width: 60%;
+  width: 40rem;
   color: white;
   position: relative;
   transition: all 0.5s ease-in-out;
@@ -53,4 +53,8 @@
   transition: all 0.5s ease-out;
   opacity: 1;
   animation-delay: 0.5s;
+}
+.selected-list {
+  font-weight: bold;
+  color: yellow !important;
 }

@@ -9,9 +9,8 @@ import { CartContext } from "./context/CartContext";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("protein");
-  // CartLists
+  // CartLists && Cart Function
   const [cartLists, setCartLists] = useState([]);
-
   const addToCart = (item) => {
     setCartLists((prevItem) => [...prevItem, item]);
   };
@@ -23,7 +22,7 @@ const App = () => {
   };
 
   return (
-    <CartContext.Provider value={cartLists}>
+    <CartContext.Provider value={{ cartLists, addToCart, deleteItemCart }}>
       <Router>
         <Header />
         <Routes>

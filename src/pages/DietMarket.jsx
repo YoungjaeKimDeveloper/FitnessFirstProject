@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidbar from "../components/Sidebar/Sidbar";
 import foods from "../../json/foods.json";
 import "./DietMarket.css";
 import FoodCard from "../components/FoodCard/FoodCard";
-
+import { CartContext } from "../context/CartContext";
 const DietMarket = ({ setSelectedCategory, selectedCategory }) => {
+  const { addToCart } = useContext(CartContext);
   const filteredFoodList = foods.filter(
     (food, index) => food.category === selectedCategory
   );
@@ -25,6 +26,7 @@ const DietMarket = ({ setSelectedCategory, selectedCategory }) => {
               key={index}
               protein={food.protein}
               price={food.price}
+              addToCart={addToCart}
             />
           ))}
         </div>

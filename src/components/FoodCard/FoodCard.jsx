@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import "./FoodCard.css";
 import { FaCartPlus } from "react-icons/fa";
 import { CartContext } from "../../context/CartContext";
-const FoodCard = ({ title, description, img, protein, price }) => {
-  const cart = useContext(CartContext);
-  console.log("Cart From FoodCard: ", cart);
+
+const FoodCard = ({ title, description, img, protein, price, addToCart }) => {
+  const { cartLists } = useContext(CartContext);
+  console.log(cartLists);
   return (
     <div className="food-cards">
       <div className="food-card">
@@ -16,7 +17,10 @@ const FoodCard = ({ title, description, img, protein, price }) => {
           <p>{protein}</p>
           <div className="price-cart">
             <p>Price:${price}</p>
-            <FaCartPlus className="food-card-cartIcon" />
+            <FaCartPlus
+              className="food-card-cartIcon"
+              onClick={() => addToCart(title)}
+            />
           </div>
         </div>
       </div>

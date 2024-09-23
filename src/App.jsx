@@ -5,29 +5,33 @@ import HomePage from "./pages/HomePage";
 import DietMarket from "./pages/DietMarket";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CartPage from "./pages/CartPage";
+import { CartContext } from "./context/CartContext";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("protein");
-  console.log(selectedCategory);
+  const shoppingCart = [];
+
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} index />
-        <Route path="/home" element={<HomePage />} />
-        <Route
-          path="/market"
-          element={
-            <DietMarket
-              setSelectedCategory={setSelectedCategory}
-              selectedCategory={selectedCategory}
-            />
-          }
-        />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </Router>
+    <CartContext.Provider value={shoppingCart}>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} index />
+          <Route path="/home" element={<HomePage />} />
+          <Route
+            path="/market"
+            element={
+              <DietMarket
+                setSelectedCategory={setSelectedCategory}
+                selectedCategory={selectedCategory}
+              />
+            }
+          />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Router>
+    </CartContext.Provider>
   );
 };
 

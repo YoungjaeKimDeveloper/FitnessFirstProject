@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./FoodCard.css";
 import { FaCartPlus } from "react-icons/fa";
+import { CartContext } from "../../context/CartContext";
 const FoodCard = ({ title, description, img, protein, price }) => {
+  const cart = useContext(CartContext);
+  console.log("Cart From FoodCard: ", cart);
   return (
     <div className="food-cards">
       <div className="food-card">

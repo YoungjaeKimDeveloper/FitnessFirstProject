@@ -9,10 +9,21 @@ import { CartContext } from "./context/CartContext";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("protein");
-  const shoppingCart = [];
+  // CartLists
+  const [cartLists, setCartLists] = useState([]);
+
+  const addToCart = (item) => {
+    setCartLists((prevItem) => [...prevItem, item]);
+  };
+  const deleteItemCart = (item) => {
+    const filteredItemLists = cartLists.filter(
+      (cartList) => item.id !== cartList.item
+    );
+    setCartLists(filteredItemLists);
+  };
 
   return (
-    <CartContext.Provider value={shoppingCart}>
+    <CartContext.Provider value={cartLists}>
       <Router>
         <Header />
         <Routes>

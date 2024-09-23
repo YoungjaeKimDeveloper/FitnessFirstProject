@@ -1,7 +1,8 @@
 .cartPage-layout {
   background-color: black;
 
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   color: white;
 }
 .cartPage-Container {
@@ -29,4 +30,29 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+/* cart-list-table CSS */
+.cart-list-table {
+  border: 1px solid white;
+  text-align: center;
+  border-collapse: collapse;
+}
+.cart-list-table th {
+  padding: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.cart-list-table tr {
+  border: 1px solid white;
+}
+.cart-list-table td {
+  border: 1px solid white;
+  padding: 2rem;
+}
+.cart-list-table .total {
+  border: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-decoration: underline;
 }

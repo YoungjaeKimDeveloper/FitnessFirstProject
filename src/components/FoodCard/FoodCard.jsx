@@ -21,7 +21,6 @@ const FoodCard = ({
         <div className="food-card-contents">
           <p className="food-title">{title}</p>
           <p className="food-description">{description}</p>
-
           <p>{protein}</p>
           <div className="price-cart">
             <p>Price:${price}</p>

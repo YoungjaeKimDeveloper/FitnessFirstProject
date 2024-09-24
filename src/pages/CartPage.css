@@ -53,15 +53,16 @@
 .cart-list-table td {
   border: 1px solid white;
   padding: 2rem;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+}
+.food-price {
+  letter-spacing: 0.2rem;
 }
 .cart-list-table .total {
   border: none;
   font-weight: bold;
   font-size: 1.5rem;
   padding: 2rem;
-  text-decoration: underline;
 }
 .cart-thumbNail {
   width: 100px;
@@ -72,7 +73,6 @@
 .cartIsEmpty-Message {
   text-align: center;
   height: 400px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,4 +80,22 @@
 .cartIsEmpty-Message p {
   font-size: 2rem;
   text-transform: uppercase;
+}
+.total-span {
+  text-transform: uppercase;
+}
+.item-blank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.delete-btn {
+  width: 50px;
+  background-color: transparent;
+  color: white;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
 }

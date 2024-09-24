@@ -4,8 +4,12 @@ import Error from "./components/Error/Error";
 import HomePage from "./pages/HomePage";
 import DietMarket from "./pages/DietMarket";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import CartPage from "./pages/CartPage";
 import { CartContext } from "./context/CartContext";
+// Toast
+
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("protein");
@@ -30,6 +34,19 @@ const App = () => {
 
   return (
     <CartContext.Provider value={{ cartLists, addToCart, deleteItemCart }}>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
       <Router>
         <Header />
         <Routes>

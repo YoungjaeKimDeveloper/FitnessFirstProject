@@ -3,6 +3,7 @@ import "./CartPage.css";
 
 import { CartContext } from "../context/CartContext";
 import { MdCancel } from "react-icons/md";
+import { toast } from "react-toastify";
 const CartPage = () => {
   // Calculate the total Price logic
   const { cartLists } = useContext(CartContext);
@@ -12,6 +13,24 @@ const CartPage = () => {
   const calQuantity = (prev, next) => prev + next.quantity;
   const totalQuantity = cartLists.reduce(calQuantity, 0);
   const { deleteItemCart } = useContext(CartContext);
+
+  const notify = (food) =>
+    toast.info(`${food.foodTitle} + "is removed  🥺"`, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      className: "toast-message",
+    });
+
+  const deleteItems = (shoppinItem) => {
+    deleteItemCart(shoppinItem);
+    notify(shoppinItem);
+  };
 
   return (
     <div className="cartPage-layout">
@@ -46,7 +65,7 @@ const CartPage = () => {
                   <MdCancel
                     className="delete-btn"
                     key={shoppingList.id}
-                    onClick={() => deleteItemCart(shoppingList)}
+                    onClick={() => deleteItems(shoppingList)}
                   />
                 </td>
               </tr>

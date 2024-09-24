@@ -1,4 +1,5 @@
 import React from "react";
+import "./BlogMenu.css";
 import dogFace from "../../../public/assets/blogPart/dogFace.jpg";
 const BlogMenu = () => {
   const navList = [

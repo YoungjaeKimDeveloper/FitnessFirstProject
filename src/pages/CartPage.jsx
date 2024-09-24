@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./CartPage.css";
 import foods from "../../json/foods.json";
+import { CartContext } from "../context/CartContext";
 const CartPage = () => {
-  const tempFoodsLists = foods.slice(0, 5);
+  // Calculate the total Price logic
+  const { cartLists } = useContext(CartContext);
   const calTotalPrice = (prev, next) => prev + next.price;
-  const total = tempFoodsLists.reduce(calTotalPrice, 0);
+  const totalPrice = cartLists.reduce(calTotalPrice, 0);
+  // Calculate the total Quantity
+  const calQuantity = (prev, next) => prev + next.quantity;
+  const totalQuantity = cartLists.reduce(calQuantity, 0);
+  const payment = totalPrice * totalQuantity;
   return (
     <div className="cartPage-layout">
       <div className="cartPage-Container">
@@ -13,40 +19,45 @@ const CartPage = () => {
           {/* Table Head Part */}
           <tr>
             <th>No</th>
+            <th>ThumbNail</th>
             <th>ItemName</th>
             <th>Quantity</th>
             <th>Price</th>
           </tr>
-          {tempFoodsLists.map((shoppingList, index) => (
+          {cartLists.map((shoppingList, index) => (
             <>
               <tr>
-                <td>{index + 1}</td>
-                <td>{shoppingList.foodTitle}</td>
-                <td>1</td>
-                <td>${shoppingList.price}</td>
+                <td className="cartLists-index">{index + 1}</td>
+                <td>
+                  <img
+                    src={shoppingList.img}
+                    alt="thumbNail"
+                    className="cart-thumbNail"
+                  />
+                </td>
+                <td className="foodName">{shoppingList.foodTitle}</td>
+                <td>{shoppingList.quantity}</td>
+                <td>${shoppingList.price * shoppingList.quantity}</td>
               </tr>
             </>
           ))}
-
-          <tr className="total">
-            <td className="total"></td>
-            <td className="total"></td>
-            <td>40</td>
-            <td>${total}</td>
-          </tr>
+          {cartLists.length > 1 && (
+            <>
+              <tr className="total">
+                <td className="total"></td>
+                <td className="total"></td>
+                <td></td>
+                <td>{totalQuantity}</td>
+                <td>${payment}</td>
+              </tr>
+            </>
+          )}
         </table>
-        {/* {foods.slice(0, 5).map((shoppingList, index) => (
-          <>
-            <li key={index} className="food-item">
-              {index + 1}.{shoppingList.foodTitle}
-              <img
-                src={shoppingList.img}
-                alt="alt-img"
-                className="food-item-img"
-              />
-            </li>
-          </>
-        ))} */}
+        {cartLists.length < 1 && (
+          <div className="cartIsEmpty-Message">
+            <p>Cart is Empty...</p>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -10,10 +10,17 @@ import { CartContext } from "./context/CartContext";
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState("protein");
   // CartLists && Cart Function
+
   const [cartLists, setCartLists] = useState([]);
   const addToCart = (item) => {
-    setCartLists((prevItem) => [...prevItem, item]);
+    const isExsisted = cartLists.some((listedItem) => listedItem == item);
+    if (isExsisted) {
+      item.quantity++;
+    } else {
+      setCartLists((prevItem) => [...prevItem, item]);
+    }
   };
+
   const deleteItemCart = (item) => {
     const filteredItemLists = cartLists.filter(
       (cartList) => item.id !== cartList.item

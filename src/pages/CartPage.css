@@ -1,13 +1,11 @@
 .cartPage-layout {
   background-color: black;
-
   min-height: 100vh;
   max-height: 100%;
   color: white;
 }
 .cartPage-Container {
   margin: auto;
-  background-color: brown;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -31,6 +29,13 @@
   height: 60px;
   border-radius: 50%;
 }
+.cartLists-index {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.foodName {
+  font-size: 2rem;
+}
 /* cart-list-table CSS */
 .cart-list-table {
   border: 1px solid white;
@@ -48,6 +53,8 @@
 .cart-list-table td {
   border: 1px solid white;
   padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 .cart-list-table .total {
   border: none;
@@ -55,4 +62,22 @@
   font-size: 1.5rem;
   padding: 2rem;
   text-decoration: underline;
+}
+.cart-thumbNail {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: rgba(232, 166, 166, 0.25) 0px 25px 50px -12px;
+}
+.cartIsEmpty-Message {
+  text-align: center;
+  height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartIsEmpty-Message p {
+  font-size: 2rem;
+  text-transform: uppercase;
 }

@@ -6,6 +6,7 @@ import FoodCard from "../components/FoodCard/FoodCard";
 import { CartContext } from "../context/CartContext";
 const DietMarket = ({ setSelectedCategory, selectedCategory }) => {
   const { addToCart } = useContext(CartContext);
+
   const filteredFoodList = foods.filter(
     (food, index) => food.category === selectedCategory
   );
@@ -26,6 +27,7 @@ const DietMarket = ({ setSelectedCategory, selectedCategory }) => {
               key={index}
               protein={food.protein}
               price={food.price}
+              food={food}
               addToCart={addToCart}
             />
           ))}

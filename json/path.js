@@ -30,3 +30,4 @@ import seafood from "../public/assets/foodsImage/seafoodSet.webp";
 import sSteak from "../public/assets/foodsImage/smallSteak.jpg";
 
 import vetMeal from "../public/assets/foodsImage/vetMeal.webp";
+import food from "/Users/youngjaekim/Desktop/webDeveloper/ING/fitnessProject/fitnessFirst/public/assets/foodsImage/beefSet.webp"

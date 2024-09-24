@@ -3,7 +3,15 @@ import "./FoodCard.css";
 import { FaCartPlus } from "react-icons/fa";
 import { CartContext } from "../../context/CartContext";
 
-const FoodCard = ({ title, description, img, protein, price, addToCart }) => {
+const FoodCard = ({
+  title,
+  description,
+  img,
+  protein,
+  price,
+  food,
+  addToCart,
+}) => {
   const { cartLists } = useContext(CartContext);
   console.log(cartLists);
   return (
@@ -19,7 +27,7 @@ const FoodCard = ({ title, description, img, protein, price, addToCart }) => {
             <p>Price:${price}</p>
             <FaCartPlus
               className="food-card-cartIcon"
-              onClick={() => addToCart(title)}
+              onClick={() => addToCart(food)}
             />
           </div>
         </div>

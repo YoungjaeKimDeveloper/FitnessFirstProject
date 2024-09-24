@@ -31,20 +31,16 @@ const CartPage = () => {
     deleteItemCart(shoppinItem);
     notify(shoppinItem);
   };
-
+  const thLists = ["No", "ThumbNail", "ItemName", "Price Per Item", "Quantity"];
   return (
     <div className="cartPage-layout">
       <div className="cartPage-Container">
         <h1>Cart List</h1>
         <table className="cart-list-table">
-          {/* Table Head Part */}
           <tr>
-            <th>No</th>
-            <th>ThumbNail</th>
-            <th>ItemName</th>
-            <th>Price Per Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
+            {thLists.map((thiList, index) => (
+              <th key={index}>{thiList}</th>
+            ))}
           </tr>
           {cartLists.map((shoppingList, index) => (
             <>

@@ -5,11 +5,14 @@ import "./BlogNews.css";
 const NewsLayout = ({ category, searchNews }) => {
   const [newsAPIs, setNewsAPIs] = useState([]);
   const [error, setError] = useState("");
+  const apple = "Apple";
   // Call API
   const fetchNews = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=food&pageSize=7&apiKey=c53761d913f646f2948f9078ff0b9329`
+        searchNews
+          ? `https://newsapi.org/v2/everything?q=${searchNews}&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
+          : `https://newsapi.org/v2/top-headlines?country=us&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
       );
       setNewsAPIs(response.data.articles);
     } catch (error) {
@@ -18,8 +21,8 @@ const NewsLayout = ({ category, searchNews }) => {
   };
   useEffect(() => {
     fetchNews();
-  }, []);
-  console.log(newsAPIs);
+  }, [searchNews]);
+  console.log("From BlogNEws", searchNews);
   if (error) {
     return <p>{error}</p>;
   }

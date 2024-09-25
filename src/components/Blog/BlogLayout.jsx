@@ -8,7 +8,7 @@ const BlogLayout = () => {
   const [category, setCategory] = useState("business");
 
   const selectedCategory = (category) => setCategory(category);
-  const [searchNews, setSearchNews] = useState("");
+  const [searchNews, setSearchNews] = useState("samsung");
 
   return (
     <div className="blog-layout">

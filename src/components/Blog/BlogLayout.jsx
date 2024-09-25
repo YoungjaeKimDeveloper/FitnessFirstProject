@@ -3,15 +3,19 @@ import "./BlogLayout.css";
 
 import BlogMenu from "./BlogMenu";
 import BlogNews from "./BlogNews";
+import BlogHeader from "./BlogHeader";
 const BlogLayout = () => {
   const [category, setCategory] = useState("business");
+
   const selectedCategory = (category) => setCategory(category);
+  const [searchNews, setSearchNews] = useState("");
+
   return (
     <div className="blog-layout">
       <div className="blog-layout-container">
-        <div className="blog-main-title">News&Blogs</div>
+        <BlogHeader setSearchNews={setSearchNews} searchNews={searchNews} />
         <BlogMenu selectedCategory={selectedCategory} />
-        <BlogNews category={category} />
+        <BlogNews category={category} searchNews={searchNews} />
         <div className="blog-list">
           <p>BLog-list Part</p>
         </div>

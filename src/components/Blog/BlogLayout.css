@@ -16,18 +16,8 @@
   grid-template-columns: 15rem 2.5fr 1fr 1fr;
   grid-template-rows: 6rem 1fr 1fr 4rem;
 }
-.blog-main-title {
-  grid-column: 1/-1;
-  grid-row: 1/1;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  border: 1px solid white;
-}
+/* Blog Main */
+
 /* Footer Section */
 .blog-footer {
   grid-column: 1/-1;

@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BlogNewsElement from "./BlogNewsElement";
 import "./BlogNews.css";
-const NewsLayout = ({ category }) => {
+const NewsLayout = ({ category, searchNews }) => {
   const [newsAPIs, setNewsAPIs] = useState([]);
   const [error, setError] = useState("");
   // Call API
   const fetchNews = async () => {
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${category}&pageSize=7&apiKey=c53761d913f646f2948f9078ff0b9329`
+        `https://newsapi.org/v2/everything?q=food&pageSize=7&apiKey=c53761d913f646f2948f9078ff0b9329`
       );
       setNewsAPIs(response.data.articles);
     } catch (error) {
@@ -18,7 +18,7 @@ const NewsLayout = ({ category }) => {
   };
   useEffect(() => {
     fetchNews();
-  }, [category]);
+  }, []);
   console.log(newsAPIs);
   if (error) {
     return <p>{error}</p>;

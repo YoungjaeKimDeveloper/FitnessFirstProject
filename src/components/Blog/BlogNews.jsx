@@ -12,12 +12,16 @@ const NewsLayout = ({ category, searchNews }) => {
       const response = await axios.get(
         searchNews
           ? `https://newsapi.org/v2/everything?q=${searchNews}&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
-          : `https://newsapi.org/v2/top-headlines?country=us&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
+          : `https://newsapi.org/v2/top-headlines?country=us&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
       );
       setNewsAPIs(response.data.articles);
     } catch (error) {
       setError(error.message);
     }
+  };
+  const fetchNewsByCategory = async () => {
+    try {
+    } catch (error) {}
   };
   useEffect(() => {
     fetchNews();

@@ -40,3 +40,6 @@
   display: flex;
   align-items: center;
 }
+.news-content {
+  padding: 0rem 0.5rem;
+}

@@ -9,3 +9,4 @@
 5. Call the Weather API
 6. Food API and Pick the chicken breast show the graph.
 7. add button and Modal
+8. NEws API KEY c53761d913f646f2948f9078ff0b9329

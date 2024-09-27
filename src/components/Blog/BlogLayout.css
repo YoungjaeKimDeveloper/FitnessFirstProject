@@ -10,14 +10,17 @@
 .blog-layout-container {
   width: 95%;
   height: 95%;
-  border: 5px solid white;
   color: white;
   display: grid;
   grid-template-columns: 15rem 2.5fr 1fr 1fr;
   grid-template-rows: 6rem 1fr 1fr 4rem;
+  position: relative;
 }
 /* Blog Main */
 
 .news-content {
   padding: 0rem 0.5rem;
+}
+.modalPoPUp {
+  background-color: black !important;
 }

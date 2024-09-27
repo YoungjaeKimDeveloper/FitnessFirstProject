@@ -8,9 +8,20 @@ const BlogNewsElement = ({
   urlToImage,
   description,
   content,
+  toggleModal,
+  selectArticle,
+  newsAPI,
+  url,
 }) => {
+  const handleClick = () => {
+    selectArticle({ title, description, urlToImage, url });
+    toggleModal();
+  };
   return (
-    <div className={isMain ? "blog-news-main" : "blog-news-sub-element"}>
+    <div
+      onClick={() => handleClick(newsAPI)}
+      className={isMain ? "blog-news-main" : "blog-news-sub-element"}
+    >
       <img
         src={urlToImage ? urlToImage : newImg}
         alt="blog-news-sub-element-img"

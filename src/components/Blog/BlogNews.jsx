@@ -4,7 +4,7 @@ import BlogNewsElement from "./BlogNewsElement";
 import "./BlogNews.css";
 import Spinner from "../common/Spinner";
 
-const NewsLayout = ({ category, searchNews }) => {
+const NewsLayout = ({ category, searchNews, toggleModal, selectArticle }) => {
   const [newsAPIs, setNewsAPIs] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -16,8 +16,8 @@ const NewsLayout = ({ category, searchNews }) => {
       const response = await axios.get(
         // Delete Temp Later
         searchNews
-          ? `https://newsapi.org/v2/everything?q=${searchNews}&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd temp`
-          : `https://newsapi.org/v2/top-headlines?country=us&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd temp`
+          ? `https://newsapi.org/v2/everything?q=${searchNews}&pageSize=7&apiKey=5b6a599d287540bc9623b7defb6d9abf`
+          : `https://newsapi.org/v2/top-headlines?country=us&pageSize=7&apiKey=5b6a599d287540bc9623b7defb6d9abf`
       );
       setNewsAPIs(response.data.articles);
     } catch (error) {
@@ -31,7 +31,7 @@ const NewsLayout = ({ category, searchNews }) => {
     try {
       setIsLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
+        `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=7&apiKey=5b6a599d287540bc9623b7defb6d9abf`
       );
       setNewsAPIs(response.data.articles);
     } catch (error) {
@@ -65,12 +65,23 @@ const NewsLayout = ({ category, searchNews }) => {
           description={newsAPIs[0].description}
           urlToImage={newsAPIs[0].urlToImage}
           content={newsAPIs[0].content}
+          url={newsAPIs[0].url}
+          toggleModal={toggleModal}
+          selectArticle={selectArticle}
+          
         />
       )}
       {/* <BlogNewsElement isMain={true} /> */}
       <div className="blog-news-sub-layout">
         {newsAPIs.slice(1).map((newsAPI, index) => (
-          <BlogNewsElement key={index} {...newsAPI} />
+          <BlogNewsElement
+            key={index}
+            {...newsAPI}
+            toggleModal={toggleModal}
+            selectArticle={selectArticle}
+            newsAPI={newsAPI}
+            
+          />
         ))}
       </div>
     </div>

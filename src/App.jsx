@@ -4,12 +4,12 @@ import Error from "./components/Error/Error";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { CartContext } from "./context/CartContext";
-
+// Pages
 import HomePage from "./pages/HomePage";
 import BlogPage from "./pages/BlogPage";
 import DietMarket from "./pages/DietMarket";
 import CartPage from "./pages/CartPage";
-// Toast
+import WritingPage from "./pages/WritingPage";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -63,13 +63,14 @@ const App = () => {
               />
             }
           />
+          <Route path="/writingPage" element={<WritingPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>
     </CartContext.Provider>
-);
+  );
 };
 
 export default App;

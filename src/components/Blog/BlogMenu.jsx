@@ -16,7 +16,7 @@ const BlogMenu = ({ selectedCategory }) => {
   return (
     <div className="blog-menu">
       <div className="blog-menu-profile">
-        <Link to="/home" className="blog-menu-profile-Link">
+        <Link to="/writingPage" className="blog-menu-profile-Link">
           <img src={dogFace} alt="profile-pic" className="blog-profile-img" />
           <p className="userName">Jeki</p>
         </Link>

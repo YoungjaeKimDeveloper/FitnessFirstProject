@@ -5,6 +5,8 @@ import BlogMenu from "./BlogMenu";
 import BlogNews from "./BlogNews";
 import BlogHeader from "./BlogHeader";
 import BlogListsPage from "../../pages/BlogListsPage";
+import Footer from "../Footer/Footer";
+
 const BlogLayout = () => {
   const [category, setCategory] = useState("business");
 
@@ -19,7 +21,7 @@ const BlogLayout = () => {
         <BlogNews category={category} searchNews={searchNews} />
         <BlogListsPage className="blog-list" />
 
-        <div className="blog-footer">footer</div>
+        <Footer className="blog-footer" />
       </div>
     </div>
   );

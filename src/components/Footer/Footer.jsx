@@ -20,7 +20,7 @@ const Footer = () => {
     <FaXTwitter />,
   ];
   return (
-    <div className="footer">
+    <div className="blog-footer footer">
       <ul>
         {aboutUs.map((content, index) => (
           <li key={index}>{content}</li>
@@ -31,12 +31,8 @@ const Footer = () => {
           <li key={index}>{list}</li>
         ))}
       </ul>
-      <ul>
-        {programes.map((program, index) => (
-          <li key={index}>{program}</li>
-        ))}
-      </ul>
-      <ul className="icons">
+
+      <ul className="blog-icons">
         <li>Follow Us</li>
         <div className="icons-list">
           {icons.map((icon, index) => (

@@ -1,0 +1,36 @@
+{
+  "diary": [
+    {
+      "id": 1,
+      "title": "Weather Today",
+      "content": "The weather was clear today. It was chilly in the morning but warmed up by noon.",
+      "date": "2024-09-27",
+      "mood": "happy",
+      "img": "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w300/2023/10/free-images.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Project Deadline",
+      "content": "Finally finished the project. Celebrated with the team over dinner.",
+      "date": "2024-09-26",
+      "mood": "relieved",
+      "img": "https://plus.unsplash.com/premium_photo-1672116453187-3aa64afe04ad?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "title": "Started Exercising",
+      "content": "Started working out again today. Feeling tired but refreshed.",
+      "date": "2024-09-25",
+      "mood": "motivated",
+      "img": "https://plus.unsplash.com/premium_photo-1664529914557-ee01920185e2?q=80&w=3080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 4,
+      "title": "Meeting with a Friend",
+      "content": "Met an old friend today and had a great time catching up.",
+      "date": "2024-09-24",
+      "mood": "joyful",
+      "img": "https://images.unsplash.com/photo-1604368141277-d3404d1982aa?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ]
+}

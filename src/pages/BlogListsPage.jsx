@@ -1,89 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BlogListsPage.css";
-import sampleImg from "../../public/assets/boxing.jpg";
+import axios from "axios";
+import BlogList from "../components/Blog/BlogList/BlogList";
+import Spinner from "../components/common/Spinner";
 
 const BlogListsPage = () => {
+  const [diaryLists, setDiaryLists] = useState([]);
+  const [error, setError] = useState("");
+  const [isLoading, setisLoading] = useState(false);
+
+  const fetchingData = async () => {
+    const response = await axios.get("http://localhost:8000/diary");
+    setDiaryLists(response.data);
+  };
+  // Call the API
+  useEffect(() => {
+    try {
+      setisLoading(true);
+      fetchingData();
+    } catch (error) {
+      setisLoading(false);
+      setError(error.message);
+    } finally {
+      setisLoading(false);
+    }
+  }, []);
+  if (isLoading) {
+    <Spinner />;
+  }
+  if (error) {
+    <p>{error}</p>;
+  }
+  console.log("Blog Lists", diaryLists);
   return (
     <div className="blog-lists-layout">
       <div className="blog-lists-layout-header">
         <h1 className="blog-lists-layout-title">The Moments I Cherished</h1>
       </div>
       {/* Blog Lists */}
-      <div className="blog-lists-layout-list">
-        <img
-          src={sampleImg}
-          alt="blog-background-image"
-          className="blog-background-image"
-        />
-        <div className="blog-list-content">
-          <h1 className="blog-list-content-title">Headline</h1>
-          <p className="blog-list-content-details">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            libero consequatur ab sed hic, aliquid magni beatae dolorum, porro
-            labore debitis ullam!
-          </p>
-        </div>
-      </div>
-      <div className="blog-lists-layout-list">
-        <img
-          src={sampleImg}
-          alt="blog-background-image"
-          className="blog-background-image"
-        />
-        <div className="blog-list-content">
-          <h1 className="blog-list-content-title">Headline</h1>
-          <p className="blog-list-content-details">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            libero consequatur ab sed hic, aliquid magni beatae dolorum, porro
-            labore debitis ullam!
-          </p>
-        </div>
-      </div>
-      <div className="blog-lists-layout-list">
-        <img
-          src={sampleImg}
-          alt="blog-background-image"
-          className="blog-background-image"
-        />
-        <div className="blog-list-content">
-          <h1 className="blog-list-content-title">Headline</h1>
-          <p className="blog-list-content-details">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            libero consequatur ab sed hic, aliquid magni beatae dolorum, porro
-            labore debitis ullam!
-          </p>
-        </div>
-      </div>
-      <div className="blog-lists-layout-list">
-        <img
-          src={sampleImg}
-          alt="blog-background-image"
-          className="blog-background-image"
-        />
-        <div className="blog-list-content">
-          <h1 className="blog-list-content-title">Headline</h1>
-          <p className="blog-list-content-details">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            libero consequatur ab sed hic, aliquid magni beatae dolorum, porro
-            labore debitis ullam!
-          </p>
-        </div>
-      </div>
-      <div className="blog-lists-layout-list">
-        <img
-          src={sampleImg}
-          alt="blog-background-image"
-          className="blog-background-image"
-        />
-        <div className="blog-list-content">
-          <h1 className="blog-list-content-title">Headline</h1>
-          <p className="blog-list-content-details">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            libero consequatur ab sed hic, aliquid magni beatae dolorum, porro
-            labore debitis ullam!
-          </p>
-        </div>
-      </div>
+      {diaryLists.map((diaryList) => {
+        return <BlogList key={diaryList.id} {...diaryList} />;
+      })}
     </div>
   );
 };

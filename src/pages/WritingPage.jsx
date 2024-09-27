@@ -1,5 +1,5 @@
 import React from "react";
-import leftBackground from "../assets/leftBackground.webp";
+import leftBackground from "../../src/assets/diary.jpg";
 import profilePic from "../../public/assets//blogPart/dogFace.jpg";
 import "./WritingPage.css";
 const WritingPage = () => {

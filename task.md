@@ -11,3 +11,9 @@
 7. add button and Modal
 8. NEws API KEY c53761d913f646f2948f9078ff0b9329
 9. chat gpt API to recommend to user. ()
+10. Learn API Commnication
+
+<!-- 27/09/2024 -->
+
+1.News Modal
+2.News BookMark

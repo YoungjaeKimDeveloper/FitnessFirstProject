@@ -32,7 +32,7 @@ const Header = () => {
           <div className="logo">
             <img src={logo} alt="logo" className="homePage-logo" />
             <Link to={"home"} className="title">
-              Calisthencis
+              Calisthenics
             </Link>
           </div>
           <ul className="nav-lists">

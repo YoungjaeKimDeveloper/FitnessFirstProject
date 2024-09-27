@@ -16,8 +16,8 @@ const NewsLayout = ({ category, searchNews }) => {
       const response = await axios.get(
         // Delete Temp Later
         searchNews
-          ? `https://newsapi.org/v2/everything?q=${searchNews}&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
-          : `https://newsapi.org/v2/top-headlines?country=us&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd`
+          ? `https://newsapi.org/v2/everything?q=${searchNews}&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd temp`
+          : `https://newsapi.org/v2/top-headlines?country=us&pageSize=7&apiKey=8b8f13a7555b42c0a6839d6b98169bbd temp`
       );
       setNewsAPIs(response.data.articles);
     } catch (error) {

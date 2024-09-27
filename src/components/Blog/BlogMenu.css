@@ -29,10 +29,14 @@
 
   border-radius: 20px;
 }
-.blog-menu-profile > .userName {
+.userName {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .blog-profile-img {
   width: 100%;
@@ -57,4 +61,7 @@
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+.blog-menu-profile-Link {
+  position: relative;
 }

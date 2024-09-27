@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoBookmarksOutline } from "react-icons/io5";
+
 import "./BlogMenu.css";
 import dogFace from "../../../public/assets/blogPart/dogFace.jpg";
-const BlogMenu = ({ selectedCategory }) => {
+const BlogMenu = ({ selectedCategory, toogleShowingBookMarks }) => {
   const navList = [
     "business",
     "entertainment",
@@ -23,6 +25,11 @@ const BlogMenu = ({ selectedCategory }) => {
       </div>
       <div className="blog-menu-linkLists">
         <h1>News List</h1>
+        <IoBookmarksOutline
+          className="bookMarks-open-icon"
+          onClick={toogleShowingBookMarks}
+        />
+
         {navList.map((navList, index) => (
           <li key={index} onClick={() => selectedCategory(navList)}>
             {navList}

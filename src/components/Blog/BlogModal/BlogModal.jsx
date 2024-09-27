@@ -5,7 +5,11 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 
 import sampleImg from "../../../assets/diary.jpg";
 import "./BlogModal.css";
-const BlogModal = ({ toggleModal, selectedArticle }) => {
+const BlogModal = ({
+  toggleModal,
+  selectedArticle,
+  toogleShowingBookMarks,
+}) => {
   // Img
   // title
   // Descriptionap

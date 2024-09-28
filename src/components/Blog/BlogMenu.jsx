@@ -29,7 +29,7 @@ const BlogMenu = ({ selectedCategory, toogleShowingBookMarks }) => {
           className="bookMarks-open-icon"
           onClick={toogleShowingBookMarks}
         />
-
+        fefae
         {navList.map((navList, index) => (
           <li key={index} onClick={() => selectedCategory(navList)}>
             {navList}

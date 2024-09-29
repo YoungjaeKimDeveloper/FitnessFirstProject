@@ -3,20 +3,30 @@ import { FaBookmark, FaLeaf } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./BlogModal.css";
 const BlogModal = ({
   toggleModal,
   selectedArticle,
   toogleShowingBookMarks,
   addBookMarks,
+  bookMarks,
 }) => {
-  // Img
-  // title
-  // Descriptionap
-  // BookMark BTN
-  const { title, description, urlToImage, url } = selectedArticle;
-  //Temp
-  const [isBookMarked, setIsBookMarked] = useState(false);
+  const { id, title, description, urlToImage, url } = selectedArticle;
+  // Check if the article is stored in the bookMarks
+
+  const isIncluded = bookMarks.some(
+    (bookMark) => bookMark.title === selectedArticle.title
+  );
+
+  const notify = (title) => toast(`"${title.slice(0, 30)}"... is marked!😎`);
+
+  const addBookMarksAndAlert = (selectedArticle) => {
+    addBookMarks(selectedArticle);
+    notify(selectedArticle.title);
+  };
 
   return (
     <div className="blog-modal">
@@ -31,12 +41,12 @@ const BlogModal = ({
           <a target="_blank" href={url} className="blog-modal-functions-btn ">
             Read more
           </a>
-          {isBookMarked ? (
+          {isIncluded ? (
             <FaBookmark className="blog-modal-bookMarker-icon" />
           ) : (
             <CiBookmark
               className="blog-modal-bookMarker-icon"
-              onClick={() => addBookMarks(selectedArticle)}
+              onClick={() => addBookMarksAndAlert(selectedArticle)}
             />
           )}
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
-import sampleImg from "../../../assets/diary.jpg";
 import { FaTrashAlt } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./SavedArticle.css";
 const SavedArticle = ({
   toogleShowingBookMarks,
   title,
@@ -8,11 +10,16 @@ const SavedArticle = ({
   urlToImage,
   url,
   deleteBookMarks,
-  id,
 }) => {
+  const notify = (title) => toast(`"${title.slice(0, 30)}"... is deleted!😎`);
+
+  const deleteArticleWithAlert = (title) => {
+    deleteBookMarks(title);
+    notify(title);
+  };
   return (
     <div className="saved-article">
-      <a href={url}>
+      <a href={url} target="_blank">
         <img
           src={urlToImage}
           alt="thumbNail"
@@ -26,7 +33,7 @@ const SavedArticle = ({
         </div>
         <FaTrashAlt
           className="saved-article-details-bin"
-          onClick={() => deleteBookMarks(id)}
+          onClick={() => deleteArticleWithAlert(title)}
         />
       </div>
     </div>

@@ -9,21 +9,35 @@ const SavedBookMarks = ({
   bookMarks,
   deleteBookMarks,
 }) => {
+  const isBookMarkedEmpty = bookMarks.length == 0;
   return (
     <div className="savedBookMarks-layout">
       <div className="savedBookMarks-layout-container">
-        <IoIosArrowRoundBack
-          className="back-icon"
-          onClick={toogleShowingBookMarks}
-        />
+        {isBookMarkedEmpty ? (
+          <div className="empty-container">
+            <p className="empty-text">Is EMPTY...</p>
+            <IoIosArrowRoundBack
+              className="back-icon"
+              onClick={toogleShowingBookMarks}
+            />
+          </div>
+        ) : (
+          <>
+            <IoIosArrowRoundBack
+              className="back-icon"
+              onClick={toogleShowingBookMarks}
+            />
 
-        {bookMarks.map((bookMark, indexKey) => (
-          <SavedArticle
-            key={indexKey}
-            {...bookMark}
-            deleteBookMarks={deleteBookMarks}
-          />
-        ))}
+            {bookMarks.map((bookMark, indexKey) => (
+              <SavedArticle
+                key={indexKey}
+                id={bookMark.id}
+                {...bookMark}
+                deleteBookMarks={deleteBookMarks}
+              />
+            ))}
+          </>
+        )}
       </div>
     </div>
   );

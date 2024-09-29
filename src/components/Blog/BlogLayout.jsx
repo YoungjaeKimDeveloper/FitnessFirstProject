@@ -23,23 +23,20 @@ const BlogLayout = () => {
   // Book Marks Part
   const [bookMarks, setBookMarks] = useState([]);
   const [isShowBookMark, setIsShowBookMark] = useState(false);
+
   const toogleShowingBookMarks = () => setIsShowBookMark((prev) => !prev);
   const addBookMarks = (article) => {
-    // const isContained = bookMarks.some((bookMark) => bookMark.id == article.id);
-    // if (isContained) {
-    //   return;
-    // }
     setBookMarks((prev) => [...prev, article]);
   };
-  const deleteBookMarks = (id) => {
-    const filterdBookMarks = bookMarks.filter((bookMark) => bookMark.id !== id);
+  const deleteBookMarks = (title) => {
+    const filterdBookMarks = bookMarks.filter(
+      (bookMark) => bookMark.title !== title
+    );
     setBookMarks(filterdBookMarks);
   };
 
-  const [savedBookMarks, setSavedBookMarks] = useState(false);
-  console.log("Selected Article", selectedArticle);
+  console.log("BookMarks: ", bookMarks);
 
-  console.log("SAVEDBOOKMARKED: ", bookMarks);
   return (
     <div className="blog-layout ">
       <div className="blog-layout-container">
@@ -63,6 +60,7 @@ const BlogLayout = () => {
             selectedArticle={selectedArticle}
             toogleShowingBookMarks={toogleShowingBookMarks}
             addBookMarks={addBookMarks}
+            bookMarks={bookMarks}
           />
         ) : (
           ""

@@ -3,7 +3,12 @@ import "./SavedBookMarks.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import "./SavedBookMarks.css";
 import SavedArticle from "./SavedArticle";
-const SavedBookMarks = ({ toogleShowingBookMarks }) => {
+const SavedBookMarks = ({
+  toogleShowingBookMarks,
+  addBookMarks,
+  bookMarks,
+  deleteBookMarks,
+}) => {
   return (
     <div className="savedBookMarks-layout">
       <div className="savedBookMarks-layout-container">
@@ -11,10 +16,14 @@ const SavedBookMarks = ({ toogleShowingBookMarks }) => {
           className="back-icon"
           onClick={toogleShowingBookMarks}
         />
-        <SavedArticle toogleShowingBookMarks={toogleShowingBookMarks} />
-        <SavedArticle />
-        <SavedArticle />
-        <SavedArticle />
+
+        {bookMarks.map((bookMark, indexKey) => (
+          <SavedArticle
+            key={indexKey}
+            {...bookMark}
+            deleteBookMarks={deleteBookMarks}
+          />
+        ))}
       </div>
     </div>
   );

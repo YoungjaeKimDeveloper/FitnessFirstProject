@@ -1,22 +1,32 @@
 import React from "react";
 import sampleImg from "../../../assets/diary.jpg";
 import { FaTrashAlt } from "react-icons/fa";
-const SavedArticle = ({ toogleShowingBookMarks }) => {
+const SavedArticle = ({
+  toogleShowingBookMarks,
+  title,
+  description,
+  urlToImage,
+  url,
+  deleteBookMarks,
+  id,
+}) => {
   return (
     <div className="saved-article">
-      <img
-        src={sampleImg}
-        alt="thumbNail"
-        className="saved-article-thumbNail"
-      />
+      <a href={url}>
+        <img
+          src={urlToImage}
+          alt="thumbNail"
+          className="saved-article-thumbNail"
+        />
+      </a>
       <div className="saved-article-details">
         <div className="saved-article-details-content">
-          <h2>Title</h2>
-          <p>Description</p>
+          <h2>{title}</h2>
+          <p>{description}</p>
         </div>
         <FaTrashAlt
           className="saved-article-details-bin"
-          onClick={toogleShowingBookMarks}
+          onClick={() => deleteBookMarks(id)}
         />
       </div>
     </div>

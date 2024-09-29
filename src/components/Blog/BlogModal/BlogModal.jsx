@@ -3,12 +3,12 @@ import { FaBookmark, FaLeaf } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-import sampleImg from "../../../assets/diary.jpg";
 import "./BlogModal.css";
 const BlogModal = ({
   toggleModal,
   selectedArticle,
   toogleShowingBookMarks,
+  addBookMarks,
 }) => {
   // Img
   // title
@@ -34,7 +34,10 @@ const BlogModal = ({
           {isBookMarked ? (
             <FaBookmark className="blog-modal-bookMarker-icon" />
           ) : (
-            <CiBookmark className="blog-modal-bookMarker-icon" />
+            <CiBookmark
+              className="blog-modal-bookMarker-icon"
+              onClick={() => addBookMarks(selectedArticle)}
+            />
           )}
         </div>
       </div>

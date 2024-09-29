@@ -8,6 +8,7 @@ import BlogListsPage from "../../pages/BlogListsPage";
 import Footer from "../Footer/Footer";
 import BlogModal from "./BlogModal/BlogModal";
 import SavedBookMarks from "./SavedBookMarks/SavedBookMarks";
+
 const BlogLayout = () => {
   const [category, setCategory] = useState("business");
 
@@ -23,7 +24,13 @@ const BlogLayout = () => {
   const [bookMarks, setBookMarks] = useState([]);
   const [isShowBookMark, setIsShowBookMark] = useState(false);
   const toogleShowingBookMarks = () => setIsShowBookMark((prev) => !prev);
-  const addBookMarks = (article) => setBookMarks((prev) => [...prev, article]);
+  const addBookMarks = (article) => {
+    // const isContained = bookMarks.some((bookMark) => bookMark.id == article.id);
+    // if (isContained) {
+    //   return;
+    // }
+    setBookMarks((prev) => [...prev, article]);
+  };
   const deleteBookMarks = (id) => {
     const filterdBookMarks = bookMarks.filter((bookMark) => bookMark.id !== id);
     setBookMarks(filterdBookMarks);
@@ -31,6 +38,8 @@ const BlogLayout = () => {
 
   const [savedBookMarks, setSavedBookMarks] = useState(false);
   console.log("Selected Article", selectedArticle);
+
+  console.log("SAVEDBOOKMARKED: ", bookMarks);
   return (
     <div className="blog-layout ">
       <div className="blog-layout-container">
@@ -44,6 +53,7 @@ const BlogLayout = () => {
           searchNews={searchNews}
           toggleModal={toggleModal}
           selectArticle={selectArticle}
+          addBookMarks={addBookMarks}
         />
         <BlogListsPage className="blog-list" />
         {isModalPoP ? (
@@ -52,11 +62,19 @@ const BlogLayout = () => {
             toggleModal={toggleModal}
             selectedArticle={selectedArticle}
             toogleShowingBookMarks={toogleShowingBookMarks}
+            addBookMarks={addBookMarks}
           />
         ) : (
           ""
         )}
-        {isShowBookMark && <SavedBookMarks toogleShowingBookMarks={toogleShowingBookMarks}/>}
+        {isShowBookMark && (
+          <SavedBookMarks
+            bookMarks={bookMarks}
+            toogleShowingBookMarks={toogleShowingBookMarks}
+            addBookMarks={addBookMarks}
+            deleteBookMarks={deleteBookMarks}
+          />
+        )}
         <Footer className="blog-footer" />
       </div>
     </div>

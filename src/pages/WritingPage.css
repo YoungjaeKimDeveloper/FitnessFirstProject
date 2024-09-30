@@ -37,6 +37,62 @@
   object-position: center;
   background-size: cover;
   border: 5px solid wheat;
-
   border-radius: 50%;
+}
+/* writing-right-content */
+.writing-right-contents-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  width: 50%;
+}
+.right-contents-container {
+  border: 1px solid wheat;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rem 0rem;
+}
+
+.emotion-selections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 100%;
+}
+.emotion {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  font-family: cursive;
+  font-size: 2rem;
+}
+.emotion input {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.2rem;
+}
+/* Input Management */
+.writing-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2rem;
+  width: 50%;
+  height: 200px;
+  color: white;
+}
+.diary-input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  width: 100%;
+  margin-top: 2rem;
 }

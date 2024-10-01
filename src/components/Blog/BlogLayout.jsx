@@ -34,7 +34,11 @@ const BlogLayout = () => {
     );
     setBookMarks(filterdBookMarks);
   };
-
+  // Show Writing page
+  const [showWritingPage, setShowWritingPage] = useState(false);
+  const toggleWritingPage = () => {
+    setShowWritingPage((prev) => !prev);
+  };
   console.log("BookMarks: ", bookMarks);
 
   return (

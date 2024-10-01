@@ -96,3 +96,11 @@
   width: 100%;
   margin-top: 2rem;
 }
+.writing-input-image {
+  cursor: pointer;
+  font-size: 2rem;
+  padding-top: 5rem;
+}
+.input-image {
+  display: none;
+}

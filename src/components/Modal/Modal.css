@@ -35,6 +35,9 @@
   transition: all 0.3s ease-in-out;
   color: white;
 }
+.back-btn-xl {
+  font-size: 5rem;
+}
 .back-btn:hover {
   opacity: 1;
 }

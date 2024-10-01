@@ -45,7 +45,7 @@ const BlogLayout = () => {
   return (
     <div className="blog-layout ">
       {showWritingPage ? (
-        <Writing />
+        <Writing toggleWritingPage={toggleWritingPage} />
       ) : (
         <div className="blog-layout-container">
           <BlogHeader setSearchNews={setSearchNews} searchNews={searchNews} />

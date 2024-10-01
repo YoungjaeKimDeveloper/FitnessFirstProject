@@ -1,11 +1,17 @@
 import React from "react";
 import leftBackground from "../../../assets/diary.jpg";
 import profilePic from "../../../../public/assets/blogListBackground.jpg";
+import { IoIosArrowRoundBack } from "react-icons/io";
+
 import "./Writing.css";
-const Writing = () => {
+const Writing = ({ toggleWritingPage }) => {
   return (
     <div className="writingPage-layout">
       <div className="leftbackGround-layout">
+        <IoIosArrowRoundBack
+          className="back-btn back-btn-xl"
+          onClick={toggleWritingPage}
+        />
         <img
           src={leftBackground}
           alt="profile-pic"
@@ -53,9 +59,9 @@ const Writing = () => {
               <input type="radio" value="happy" id="happy" name="mood" />
             </lable>
           </div>
-          <label htmlFor="" className="writing-input">
+          <label for="image-file" className="writing-input writing-input-image">
             Upload Image
-            <input type="file" />
+            <input type="file" id="image-file" className="input-image" />
           </label>
         </div>
       </div>

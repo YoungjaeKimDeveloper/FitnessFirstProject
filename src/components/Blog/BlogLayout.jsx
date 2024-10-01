@@ -8,6 +8,7 @@ import BlogListsPage from "../../pages/BlogListsPage";
 import Footer from "../Footer/Footer";
 import BlogModal from "./BlogModal/BlogModal";
 import SavedBookMarks from "./SavedBookMarks/SavedBookMarks";
+import Writing from "./Writing/Writing";
 
 const BlogLayout = () => {
   const [category, setCategory] = useState("business");
@@ -35,50 +36,56 @@ const BlogLayout = () => {
     setBookMarks(filterdBookMarks);
   };
   // Show Writing page
-  const [showWritingPage, setShowWritingPage] = useState(false);
+  const [showWritingPage, setShowbloWritingPage] = useState(false);
   const toggleWritingPage = () => {
-    setShowWritingPage((prev) => !prev);
+    setShowbloWritingPage((prev) => !prev);
   };
   console.log("BookMarks: ", bookMarks);
 
   return (
     <div className="blog-layout ">
-      <div className="blog-layout-container">
-        <BlogHeader setSearchNews={setSearchNews} searchNews={searchNews} />
-        <BlogMenu
-          selectedCategory={selectedCategory}
-          toogleShowingBookMarks={toogleShowingBookMarks}
-        />
-        <BlogNews
-          category={category}
-          searchNews={searchNews}
-          toggleModal={toggleModal}
-          selectArticle={selectArticle}
-          addBookMarks={addBookMarks}
-        />
-        <BlogListsPage className="blog-list" />
-        {isModalPoP ? (
-          <BlogModal
-            className="modal"
+      {showWritingPage ? (
+        <Writing />
+      ) : (
+        <div className="blog-layout-container">
+          <BlogHeader setSearchNews={setSearchNews} searchNews={searchNews} />
+          <BlogMenu
+            selectedCategory={selectedCategory}
+            toogleShowingBookMarks={toogleShowingBookMarks}
+            showWritingPage={showWritingPage}
+            toggleWritingPage={toggleWritingPage}
+          />
+          <BlogNews
+            category={category}
+            searchNews={searchNews}
             toggleModal={toggleModal}
-            selectedArticle={selectedArticle}
-            toogleShowingBookMarks={toogleShowingBookMarks}
+            selectArticle={selectArticle}
             addBookMarks={addBookMarks}
-            bookMarks={bookMarks}
           />
-        ) : (
-          ""
-        )}
-        {isShowBookMark && (
-          <SavedBookMarks
-            bookMarks={bookMarks}
-            toogleShowingBookMarks={toogleShowingBookMarks}
-            addBookMarks={addBookMarks}
-            deleteBookMarks={deleteBookMarks}
-          />
-        )}
-        <Footer className="blog-footer" />
-      </div>
+          <BlogListsPage className="blog-list" />
+          {isModalPoP ? (
+            <BlogModal
+              className="modal"
+              toggleModal={toggleModal}
+              selectedArticle={selectedArticle}
+              toogleShowingBookMarks={toogleShowingBookMarks}
+              addBookMarks={addBookMarks}
+              bookMarks={bookMarks}
+            />
+          ) : (
+            ""
+          )}
+          {isShowBookMark && (
+            <SavedBookMarks
+              bookMarks={bookMarks}
+              toogleShowingBookMarks={toogleShowingBookMarks}
+              addBookMarks={addBookMarks}
+              deleteBookMarks={deleteBookMarks}
+            />
+          )}
+          <Footer className="blog-footer" />
+        </div>
+      )}
     </div>
   );
 };

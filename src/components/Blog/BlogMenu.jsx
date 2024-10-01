@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoBookmarksOutline } from "react-icons/io5";
-
+import Writing from "../Blog/Writing/Writing";
 import "./BlogMenu.css";
 import dogFace from "../../../public/assets/blogPart/dogFace.jpg";
-const BlogMenu = ({ selectedCategory, toogleShowingBookMarks }) => {
+const BlogMenu = ({
+  selectedCategory,
+  toogleShowingBookMarks,
+  toggleWritingPage,
+}) => {
   const navList = [
     "business",
     "entertainment",
@@ -18,10 +22,10 @@ const BlogMenu = ({ selectedCategory, toogleShowingBookMarks }) => {
   return (
     <div className="blog-menu">
       <div className="blog-menu-profile">
-        <Link to="/writingPage" className="blog-menu-profile-Link">
+        <p className="blog-menu-profile-Link" onClick={toggleWritingPage}>
           <img src={dogFace} alt="profile-pic" className="blog-profile-img" />
           <p className="userName">Jeki</p>
-        </Link>
+        </p>
       </div>
       <div className="blog-menu-linkLists">
         <h1>News List</h1>

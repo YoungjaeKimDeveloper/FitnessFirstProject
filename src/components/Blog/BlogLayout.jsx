@@ -40,12 +40,21 @@ const BlogLayout = () => {
   const toggleWritingPage = () => {
     setShowbloWritingPage((prev) => !prev);
   };
+  // Writing Page
+  const [writinObject, setWritingObject] = useState({
+    title: "",
+    content: "",
+    image: null,
+  });
   console.log("BookMarks: ", bookMarks);
 
   return (
     <div className="blog-layout ">
       {showWritingPage ? (
-        <Writing toggleWritingPage={toggleWritingPage} />
+        <Writing
+          toggleWritingPage={toggleWritingPage}
+          setWritingObject={setWritingObject}
+        />
       ) : (
         <div className="blog-layout-container">
           <BlogHeader setSearchNews={setSearchNews} searchNews={searchNews} />

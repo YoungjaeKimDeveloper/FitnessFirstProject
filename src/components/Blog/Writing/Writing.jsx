@@ -4,7 +4,7 @@ import profilePic from "../../../../public/assets/blogListBackground.jpg";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
 import "./Writing.css";
-const Writing = ({ toggleWritingPage }) => {
+const Writing = ({ toggleWritingPage, setWritingObject }) => {
   return (
     <div className="writingPage-layout">
       <div className="leftbackGround-layout">
@@ -16,6 +16,7 @@ const Writing = ({ toggleWritingPage }) => {
           src={leftBackground}
           alt="profile-pic"
           className="left-background"
+          onChange={(e)=>setWritingObject()}
         />
         <div className="profile">
           <img src={profilePic} alt="profile-pic" className="profile-pic" />

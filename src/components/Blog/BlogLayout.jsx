@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./BlogLayout.css";
 
 import BlogMenu from "./BlogMenu";
@@ -62,6 +62,13 @@ const BlogLayout = () => {
     }
   };
 
+  // Delete HTTP Request
+  const deleteJob = async (id) => {
+    const res = await fetch(`http://localhost:8000/diary/${id}`, {
+      method: "DELETE",
+    });
+  };
+
   return (
     <div className="blog-layout ">
       {showWritingPage ? (
@@ -87,7 +94,7 @@ const BlogLayout = () => {
             selectArticle={selectArticle}
             addBookMarks={addBookMarks}
           />
-          <BlogListsPage className="blog-list" />
+          <BlogListsPage className="blog-list" deleteJob={deleteJob} />
           {isModalPoP ? (
             <BlogModal
               className="modal"

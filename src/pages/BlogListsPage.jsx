@@ -4,7 +4,7 @@ import axios from "axios";
 import BlogList from "../components/Blog/BlogList/BlogList";
 import Spinner from "../components/common/Spinner";
 
-const BlogListsPage = () => {
+const BlogListsPage = ({ deleteJob }) => {
   const [diaryLists, setDiaryLists] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setisLoading] = useState(false);
@@ -39,7 +39,9 @@ const BlogListsPage = () => {
       </div>
       {/* Blog Lists */}
       {diaryLists.map((diaryList) => {
-        return <BlogList key={diaryList.id} {...diaryList} />;
+        return (
+          <BlogList key={diaryList.id} {...diaryList} deleteJob={deleteJob} />
+        );
       })}
     </div>
   );

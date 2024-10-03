@@ -1,9 +1,11 @@
 import React from "react";
+import { IoTrashBinOutline } from "react-icons/io5";
+
 import "./BlogList.css";
 import defaultBG from "../../../assets/diary.jpg";
 import defaultBG2 from "../../../assets/love.jpg";
 
-const BlogList = ({ title, content, date, mood, img }) => {
+const BlogList = ({ id, title, content, date, mood, img, deleteJob }) => {
   const backgroundLists = [defaultBG, defaultBG2];
   const randomNumber = Math.ceil(Math.random() * backgroundLists.length);
   const defaultBg = backgroundLists[randomNumber];
@@ -19,6 +21,7 @@ const BlogList = ({ title, content, date, mood, img }) => {
         <p>{date}</p>
         <p>{mood}</p>
         <p className="blog-list-content-details">{content}</p>
+        <IoTrashBinOutline onClick={() => deleteJob(id)} />
       </div>
     </div>
   );

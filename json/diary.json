@@ -1,7 +1,7 @@
 {
   "diary": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Weather Today",
       "content": "The weather was clear today. It was chilly in the morning but warmed up by noon.",
       "date": "2024-09-27",
@@ -9,7 +9,7 @@
       "img": "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w300/2023/10/free-images.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Project Deadline",
       "content": "Finally finished the project. Celebrated with the team over dinner.",
       "date": "2024-09-26",
@@ -17,7 +17,7 @@
       "img": "https://plus.unsplash.com/premium_photo-1672116453187-3aa64afe04ad?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Started Exercising",
       "content": "Started working out again today. Feeling tired but refreshed.",
       "date": "2024-09-25",
@@ -25,12 +25,308 @@
       "img": "https://plus.unsplash.com/premium_photo-1664529914557-ee01920185e2?q=80&w=3080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Meeting with a Friend",
       "content": "Met an old friend today and had a great time catching up.",
       "date": "2024-09-24",
       "mood": "joyful",
       "img": "https://images.unsplash.com/photo-1604368141277-d3404d1982aa?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "cb1a",
+      "title": "fawe",
+      "content": "faew",
+      "date": "2024-10-09",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "b16a",
+      "title": "fae",
+      "content": "faeafe",
+      "date": "2024-10-03",
+      "image": null,
+      "img": {}
+    },
+    {
+      "id": "07f9",
+      "title": "Today was beautiful",
+      "content": "Have a good day ",
+      "date": "2024-10-09",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "24fe",
+      "title": "",
+      "content": "",
+      "date": "2024-10-03",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "bd5f",
+      "title": "",
+      "content": "",
+      "date": "2024-10-03",
+      "image": null
+    },
+    {
+      "id": "f326",
+      "title": "",
+      "content": "",
+      "date": "2024-10-03",
+      "image": null
+    },
+    {
+      "id": "789d46e1-9052-465b-aa0f-e28eac0085da",
+      "title": "feaf",
+      "content": "aefef",
+      "date": "2024-09-30",
+      "image": null,
+      "mood": "happy",
+      "img": {}
+    },
+    {
+      "id": "11b726fa-f7a3-4fd0-b669-bfa700d03cac",
+      "title": "efa",
+      "content": "fea",
+      "date": "2024-10-01",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "11b726fa-f7a3-4fd0-b669-bfa700d03cac",
+      "title": "efa",
+      "content": "fea",
+      "date": "2024-10-01",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "11b726fa-f7a3-4fd0-b669-bfa700d03cac",
+      "title": "efa",
+      "content": "fea",
+      "date": "2024-10-01",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "11b726fa-f7a3-4fd0-b669-bfa700d03cac",
+      "title": "efa",
+      "content": "fea",
+      "date": "2024-10-01",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "11b726fa-f7a3-4fd0-b669-bfa700d03cac",
+      "title": "efa",
+      "content": "fea",
+      "date": "2024-10-01",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "11b726fa-f7a3-4fd0-b669-bfa700d03cac",
+      "title": "efa",
+      "content": "fea",
+      "date": "2024-10-01",
+      "image": null,
+      "mood": "sad",
+      "img": {}
+    },
+    {
+      "id": "442901e1-afbc-46b2-9b86-ee5f0d131bc4",
+      "title": "afeaef",
+      "content": "faeweaf",
+      "date": "2024-10-16",
+      "image": {},
+      "mood": "happy"
+    },
+    {
+      "id": "8b85"
+    },
+    {
+      "id": "6a1c"
+    },
+    {
+      "id": "3c17"
+    },
+    {
+      "id": "04ff"
+    },
+    {
+      "id": "42fd"
+    },
+    {
+      "id": "ca3f"
+    },
+    {
+      "id": "b82e"
+    },
+    {
+      "id": "1eb7"
+    },
+    {
+      "id": "7935"
+    },
+    {
+      "id": "e532"
+    },
+    {
+      "id": "d0ba"
+    },
+    {
+      "id": "9741"
+    },
+    {
+      "id": "34c1"
+    },
+    {
+      "id": "51a3"
+    },
+    {
+      "id": "8135"
+    },
+    {
+      "id": "abad"
+    },
+    {
+      "id": "6988"
+    },
+    {
+      "id": "982f"
+    },
+    {
+      "id": "bf01"
+    },
+    {
+      "id": "b227"
+    },
+    {
+      "id": "3dda"
+    },
+    {
+      "id": "e1e3"
+    },
+    {
+      "id": "3855"
+    },
+    {
+      "id": "76c3d3c9-f19f-4988-82c6-ffa71be22ceb",
+      "title": "ㄹㅁㄷㄹㄷ",
+      "content": "ㄹㅁㄷ",
+      "date": "2024-10-09",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "76c3d3c9-f19f-4988-82c6-ffa71be22ceb",
+      "title": "ㄹㅁㄷㄹㄷ",
+      "content": "ㄹㅁㄷ",
+      "date": "2024-10-09",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "76c3d3c9-f19f-4988-82c6-ffa71be22ceb",
+      "title": "ㄹㅁㄷㄹㄷ",
+      "content": "ㄹㅁㄷ",
+      "date": "2024-10-09",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "76c3d3c9-f19f-4988-82c6-ffa71be22ceb",
+      "title": "ㄹㅁㄷㄹㄷ",
+      "content": "ㄹㅁㄷ",
+      "date": "2024-10-09",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "image": {},
+      "mood": "sad"
+    },
+    {
+      "id": "a1274858-4b6d-49a1-92f3-5b766a4b6bd5",
+      "title": "fae",
+      "content": "afeaef",
+      "date": "2024-10-10",
+      "image": {},
+      "mood": "sad"
     }
   ]
 }

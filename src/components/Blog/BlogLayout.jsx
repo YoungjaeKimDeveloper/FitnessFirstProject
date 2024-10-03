@@ -49,9 +49,19 @@ const BlogLayout = () => {
     date: today,
     image: null,
   });
-  // 
-  
-  
+  // HANDLE HTTP
+  const addDiary = async (newStory) => {
+    try {
+      const res = await fetch("http://localhost:8000/diary", {
+        method: "POST",
+        body: newStory
+      });
+      console.log("Successful");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div className="blog-layout ">
       {showWritingPage ? (
@@ -59,6 +69,7 @@ const BlogLayout = () => {
           toggleWritingPage={toggleWritingPage}
           setWritingObject={setWritingObject}
           writinObject={writinObject}
+          addDiary={addDiary}
         />
       ) : (
         <div className="blog-layout-container">

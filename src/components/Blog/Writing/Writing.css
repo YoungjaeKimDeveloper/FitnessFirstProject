@@ -50,15 +50,10 @@
 }
 .right-contents-container {
   border: 1px solid wheat;
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
   padding: 10rem 0rem;
+  width: 100%;
 }
-
 .emotion-selections {
   display: flex;
   align-items: center;
@@ -104,4 +99,13 @@
 }
 .input-image {
   display: none;
+}
+.data-form {
+  width: 100%;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

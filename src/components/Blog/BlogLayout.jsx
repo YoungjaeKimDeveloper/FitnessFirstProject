@@ -40,20 +40,25 @@ const BlogLayout = () => {
   const toggleWritingPage = () => {
     setShowbloWritingPage((prev) => !prev);
   };
-  // Writing Page
+
+  // Writing Page Components
+  const today = new Date().toISOString().split("T")[0];
   const [writinObject, setWritingObject] = useState({
     title: "",
     content: "",
+    date: today,
     image: null,
   });
-  console.log("BookMarks: ", bookMarks);
-
+  // 
+  
+  
   return (
     <div className="blog-layout ">
       {showWritingPage ? (
         <Writing
           toggleWritingPage={toggleWritingPage}
           setWritingObject={setWritingObject}
+          writinObject={writinObject}
         />
       ) : (
         <div className="blog-layout-container">

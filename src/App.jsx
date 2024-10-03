@@ -10,6 +10,7 @@ import BlogPage from "./pages/BlogPage";
 import DietMarket from "./pages/DietMarket";
 import CartPage from "./pages/CartPage";
 import WritingPage from "./pages/WritingPage";
+import Uni from "./components/Temp/Uni";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -67,6 +68,7 @@ const App = () => {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="*" element={<Error />} />
+          <Route path="plan" element={<Uni />} />
         </Routes>
       </Router>
     </CartContext.Provider>

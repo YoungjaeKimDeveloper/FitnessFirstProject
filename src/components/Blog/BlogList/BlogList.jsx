@@ -1,11 +1,16 @@
 import React from "react";
 import "./BlogList.css";
+import defaultBG from "../../../assets/diary.jpg";
+import defaultBG2 from "../../../assets/love.jpg";
 
 const BlogList = ({ title, content, date, mood, img }) => {
+  const backgroundLists = [defaultBG, defaultBG2];
+  const randomNumber = Math.ceil(Math.random() * backgroundLists.length);
+  const defaultBg = backgroundLists[randomNumber];
   return (
     <div className="blog-lists-layout-list">
       <img
-        src={img}
+        src={img || defaultBg}
         alt="blog-background-image"
         className="blog-background-image"
       />

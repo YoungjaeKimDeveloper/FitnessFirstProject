@@ -54,7 +54,7 @@ const BlogLayout = () => {
     try {
       const res = await fetch("http://localhost:8000/diary", {
         method: "POST",
-        body: newStory
+        body: JSON.stringify(newStory),
       });
       console.log("Successful");
     } catch (error) {

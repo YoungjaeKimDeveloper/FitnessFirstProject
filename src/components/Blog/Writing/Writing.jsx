@@ -28,21 +28,17 @@ const Writing = ({ toggleWritingPage, addDiary }) => {
     setNewDiary((prev) => ({ ...prev, mood: newMood }));
   };
   const handleImg = (event) => {
-    setNewDiary((prev) => ({ ...prev, image: event.target.files[0] }));
+    const file = event.target.files[0];
+    if (file) {
+      setNewDiary((prev) => ({ ...prev, image: event.target.files[0] }));
+    } else {
+      console.log("No file Selected");
+    }
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData();
-
-    formData.append("id", newDiary.id);
-    formData.append("title", newDiary.title);
-    formData.append("content", newDiary.content);
-    formData.append("date", newDiary.date);
-    formData.append("image", newDiary.image);
-    formData.append("mood", newDiary.mood);
-
-    addDiary(formData);
+    addDiary(newDiary);
   };
 
   console.log(newDiary);
@@ -139,6 +135,7 @@ const Writing = ({ toggleWritingPage, addDiary }) => {
                 id="image-file"
                 className="input-image"
                 onChange={(e) => handleImg(e)}
+                accept="image/*"
               />
             </label>
             <button type="submit">Save the Memory</button>

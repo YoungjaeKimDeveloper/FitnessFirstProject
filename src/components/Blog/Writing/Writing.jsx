@@ -12,17 +12,26 @@ import "./Writing.css";
 const Writing = ({ toggleWritingPage, addDiary }) => {
   const today = new Date().toISOString().split("T")[0];
   const navigate = useNavigate();
-
+  const toastSetting = {
+    position: "top-right",
+    autoClose: 1300,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+  };
   const notify = (newDiary) => {
     switch (newDiary.mood) {
       case "happy":
-        return toast(`${newDiary?.title} is added! 🥰`);
+        return toast(`${newDiary?.title} is added! 🥰`, toastSetting);
       case "sad":
-        return toast(`${newDiary?.title} is added! 🥲`);
+        return toast(`${newDiary?.title} is added! 🥲`, toastSetting);
       case "bad":
-        return toast(`${newDiary?.title} is added! 🤬`);
+        return toast(`${newDiary?.title} is added! 🤬`, toastSetting);
       default:
-        return toast(`${newDiary?.title} is added! `);
+        return toast(`${newDiary?.title} is added!`, toastSetting);
     }
   };
 

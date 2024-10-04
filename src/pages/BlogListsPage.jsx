@@ -9,22 +9,31 @@ const BlogListsPage = ({ deleteJob }) => {
   const [error, setError] = useState("");
   const [isLoading, setisLoading] = useState(false);
 
+  const [isClicked, setIsClicked] = useState(false);
+  const toggleClicked = () => setIsClicked((prev) => !prev);
+
   const fetchingData = async () => {
-    const response = await axios.get("http://localhost:8000/diary");
-    setDiaryLists(response.data);
-  };
-  // Call the API
-  useEffect(() => {
     try {
       setisLoading(true);
-      fetchingData();
+      const response = await axios.get("http://localhost:8000/diary");
+      setDiaryLists(response.data);
     } catch (error) {
       setisLoading(false);
       setError(error.message);
     } finally {
       setisLoading(false);
     }
+  };
+  // Call the API
+  useEffect(() => {
+    fetchingData();
   }, []);
+
+  // Delete function uploading
+  useEffect(() => {
+    fetchingData();
+  }, [isClicked]);
+
   if (isLoading) {
     <Spinner />;
   }
@@ -37,10 +46,14 @@ const BlogListsPage = ({ deleteJob }) => {
       <div className="blog-lists-layout-header">
         <h1 className="blog-lists-layout-title">The Moments I Cherished</h1>
       </div>
-      {/* Blog Lists */}
       {diaryLists.map((diaryList) => {
         return (
-          <BlogList key={diaryList.id} {...diaryList} deleteJob={deleteJob} />
+          <BlogList
+            key={diaryList.id}
+            {...diaryList}
+            deleteJob={deleteJob}
+            toggleClicked={toggleClicked}
+          />
         );
       })}
     </div>

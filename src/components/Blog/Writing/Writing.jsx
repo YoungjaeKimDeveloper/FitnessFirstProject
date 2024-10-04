@@ -3,16 +3,35 @@ import { v4 as uuidv4 } from "uuid";
 import leftBackground from "../../../assets/diary.jpg";
 import profilePic from "../../../../public/assets/blogListBackground.jpg";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
+import "react-toastify/dist/ReactToastify.css";
 import "./Writing.css";
 
 const Writing = ({ toggleWritingPage, addDiary }) => {
   const today = new Date().toISOString().split("T")[0];
+  const navigate = useNavigate();
+
+  const notify = (newDiary) => {
+    switch (newDiary.mood) {
+      case "happy":
+        return toast(`${newDiary?.title} is added! 🥰`);
+      case "sad":
+        return toast(`${newDiary?.title} is added! 🥲`);
+      case "bad":
+        return toast(`${newDiary?.title} is added! 🤬`);
+      default:
+        return toast(`${newDiary?.title} is added! `);
+    }
+  };
+
   const [newDiary, setNewDiary] = useState({
     id: uuidv4(),
     title: "",
     content: "",
     date: today,
-    image: null,
+    mood: null,
   });
 
   const handleTitle = (newTitle) => {
@@ -27,18 +46,25 @@ const Writing = ({ toggleWritingPage, addDiary }) => {
   const handleMood = (newMood) => {
     setNewDiary((prev) => ({ ...prev, mood: newMood }));
   };
-  const handleImg = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setNewDiary((prev) => ({ ...prev, image: event.target.files[0] }));
-    } else {
-      console.log("No file Selected");
+
+  const askUser = () => {
+    const confirm = window.confirm("Do you want to go main page?");
+    if (confirm) {
+      toggleWritingPage();
     }
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     addDiary(newDiary);
+    notify(newDiary);
+    setNewDiary({
+      id: uuidv4(),
+      title: "",
+      content: "",
+      date: today,
+    });
+    setTimeout(askUser, 3500);
   };
 
   console.log(newDiary);
@@ -125,19 +151,6 @@ const Writing = ({ toggleWritingPage, addDiary }) => {
                 />
               </label>
             </div>
-            <label
-              htmlFor="image-file"
-              className="writing-input writing-input-image"
-            >
-              Upload Image
-              <input
-                type="file"
-                id="image-file"
-                className="input-image"
-                onChange={(e) => handleImg(e)}
-                accept="image/*"
-              />
-            </label>
             <button type="submit">Save the Memory</button>
           </form>
         </div>

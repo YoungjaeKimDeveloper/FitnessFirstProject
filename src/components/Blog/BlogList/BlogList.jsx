@@ -37,10 +37,16 @@ const BlogList = ({
       />
       <div className="blog-list-content">
         <h1 className="blog-list-content-title">{title}</h1>
-        <p>{date}</p>
-        <p>{mood}</p>
-        <p className="blog-list-content-details">{content}</p>
-        <IoTrashBinOutline onClick={() => deleteContent(id, title)} />
+        <div className="second-container">
+          <div>
+            <p className="blog-list-content-details">{content}</p>
+            <p className="blog-list-content-mood">{mood}</p>
+          </div>
+          <div>
+            <p className="blog-list-content-date">{date}</p>
+            <IoTrashBinOutline onClick={() => deleteContent(id, title)} />
+          </div>
+        </div>
       </div>
     </div>
   );

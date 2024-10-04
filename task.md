@@ -21,9 +21,9 @@
 1.From Change the writingcOntent Object
 
 <!--04/10/2024-->
-1. Showing Toast
-2. Reset the blank
-3. Add more random image background
-4. Ask user if he wants stay or move to main Image
+1. Showing Toast  ✅
+2. Reset the blank ✅
+3. Add more random im age background
+4. Ask user if he wants stay or move to main Image ✅
 5. When user delete it show the toastify. 
 6. Prevent the empty blank 

@@ -22,9 +22,25 @@
   justify-content: space-between;
   padding: 2rem;
   position: absolute;
-  top: 50px;
+  top: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.second-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  color: black;
+  font-weight: bold;
 }
 .blog-list-content .blog-list-content-title {
   text-align: center;
   margin-bottom: 2rem;
+  color: black;
+  font-size: 3rem;
+}
+.blog-list-content-details {
+  font-size: 2rem;
 }

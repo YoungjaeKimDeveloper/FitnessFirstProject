@@ -109,3 +109,13 @@
   align-items: center;
   justify-content: center;
 }
+.submit-btn {
+  font-weight: bold;
+  background: none;
+  color: white;
+  margin-top: 2rem;
+  border: transparent;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}

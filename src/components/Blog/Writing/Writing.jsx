@@ -160,7 +160,9 @@ const Writing = ({ toggleWritingPage, addDiary }) => {
                 />
               </label>
             </div>
-            <button type="submit">Save the Memory</button>
+            <button type="submit" className="submit-btn">
+              Save the Memory
+            </button>
           </form>
         </div>
       </div>

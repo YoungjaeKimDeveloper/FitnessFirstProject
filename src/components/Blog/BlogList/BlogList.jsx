@@ -44,7 +44,7 @@ const BlogList = ({
           </div>
           <div>
             <p className="blog-list-content-date">{date}</p>
-            <IoTrashBinOutline onClick={() => deleteContent(id, title)} />
+            <IoTrashBinOutline onClick={() => deleteContent(id, title)} className="blog-delete-btn"/>
           </div>
         </div>
       </div>

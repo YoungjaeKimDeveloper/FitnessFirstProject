@@ -37,10 +37,22 @@
 }
 .blog-list-content .blog-list-content-title {
   text-align: center;
-  margin-bottom: 2rem;
-  color: black;
+  color: wheat;
   font-size: 3rem;
 }
 .blog-list-content-details {
+  font-size: 3rem;
+}
+.blog-list-content-mood {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 2rem;
   font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.blog-delete-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  color: red;
+  padding: 2px;
+  border-radius: 50%;
 }
